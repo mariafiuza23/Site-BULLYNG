@@ -1,16 +1,16 @@
 /* =========================
-   CONFIGURAÇÕES GERAIS
+   RESET E CONFIGURAÇÕES
 ========================= */
 
 :root{
     --bordo:#7A1F3D;
-    --bordo-hover:#5D1830;
-    --rosa:#D9A5B5;
-    --rosa-claro:#F6E7EC;
+    --bordo-hover:#5F1830;
+    --rosa:#DCA7B8;
+    --rosa-claro:#F7E6EC;
     --creme:#FFF9FB;
     --texto:#2D1D22;
     --branco:#FFFFFF;
-    --sombra:0 10px 30px rgba(0,0,0,0.08);
+    --sombra:0 10px 25px rgba(0,0,0,.08);
 }
 
 *{
@@ -21,6 +21,7 @@
 
 html{
     scroll-behavior:smooth;
+    overflow-x:hidden;
 }
 
 body{
@@ -28,6 +29,7 @@ body{
     background:var(--creme);
     color:var(--texto);
     line-height:1.7;
+    overflow-x:hidden;
 }
 
 img{
@@ -39,8 +41,18 @@ a{
     text-decoration:none;
 }
 
+ul{
+    list-style:none;
+}
+
 section{
-    padding:90px 8%;
+    padding:80px 20px;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
 }
 
 /* =========================
@@ -52,15 +64,15 @@ section{
     top:0;
     z-index:1000;
 
-    background:rgba(255,249,251,.96);
+    background:rgba(255,249,251,.95);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    padding:18px 8%;
+    padding:18px 5%;
 
     box-shadow:0 2px 15px rgba(0,0,0,.05);
 }
@@ -71,26 +83,25 @@ section{
     gap:10px;
 
     color:var(--bordo);
+}
 
+.logo h2{
     font-size:1.2rem;
-    font-weight:700;
 }
 
 .logo i{
-    font-size:1.5rem;
+    font-size:1.6rem;
 }
 
 .menu{
     display:flex;
-    gap:22px;
-
-    list-style:none;
+    gap:25px;
+    flex-wrap:wrap;
 }
 
 .menu a{
     color:var(--texto);
     font-weight:500;
-
     transition:.3s;
 }
 
@@ -98,88 +109,69 @@ section{
     color:var(--bordo);
 }
 
-#darkModeBtn{
-    width:45px;
-    height:45px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:var(--bordo);
-
-    color:white;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-#darkModeBtn:hover{
-    transform:scale(1.08);
-}
-
 /* =========================
    HERO
 ========================= */
 
 .hero{
-    min-height:90vh;
+    min-height:85vh;
 
     display:flex;
     align-items:center;
+}
+
+.hero{
+    max-width:1200px;
+    margin:auto;
 }
 
 .hero-content{
     width:100%;
 
     display:grid;
-
-    grid-template-columns:1.1fr 1fr;
-
-    gap:60px;
+    grid-template-columns:1fr 1fr;
 
     align-items:center;
+
+    gap:50px;
+}
+
+.hero-text{
+    text-align:left;
 }
 
 .hero-text h1{
+    color:var(--bordo);
+
     font-size:4rem;
 
     line-height:1.1;
-
-    color:var(--bordo);
 
     margin-bottom:15px;
 }
 
 .hero-text h2{
-    color:#A84C6D;
+    color:#A44D6C;
 
-    margin-bottom:25px;
-
-    font-size:1.6rem;
+    margin-bottom:20px;
 }
 
 .hero-text p{
-    margin-bottom:35px;
-
-    max-width:650px;
+    margin-bottom:30px;
 }
 
-.tag{
-    display:inline-block;
+.hero-image{
+    display:flex;
+    justify-content:center;
+}
 
-    background:var(--rosa-claro);
+.hero-image img{
+    width:100%;
+    max-width:420px;
 
-    color:var(--bordo);
+    border-radius:25px;
 
-    padding:8px 18px;
-
-    border-radius:30px;
-
-    margin-bottom:20px;
-
-    font-weight:600;
+    box-shadow:var(--sombra);
 }
 
 .hero-buttons{
@@ -190,22 +182,17 @@ section{
 
 .btn-principal{
     background:var(--bordo);
-
     color:white;
 
     padding:14px 28px;
 
     border-radius:40px;
 
-    font-weight:600;
-
     transition:.3s;
 }
 
 .btn-principal:hover{
     background:var(--bordo-hover);
-
-    transform:translateY(-3px);
 }
 
 .btn-secundario{
@@ -217,56 +204,12 @@ section{
 
     border-radius:40px;
 
-    font-weight:600;
-
     transition:.3s;
 }
 
 .btn-secundario:hover{
     background:var(--bordo);
-
     color:white;
-}
-
-.hero-image{
-    display:flex;
-    justify-content:center;
-}
-
-.hero-image img{
-    width:100%;
-    max-width:500px;
-
-    border-radius:25px;
-
-    box-shadow:var(--sombra);
-}
-
-/* =========================
-   IMPACTO
-========================= */
-
-.impacto{
-    background:linear-gradient(
-    135deg,
-    var(--bordo),
-    #9B3A5C);
-
-    color:white;
-
-    text-align:center;
-}
-
-.impacto h2{
-    font-size:2.3rem;
-
-    margin-bottom:15px;
-}
-
-.impacto p{
-    max-width:700px;
-
-    margin:auto;
 }
 
 /* =========================
@@ -275,21 +218,17 @@ section{
 
 .titulo-secao{
     text-align:center;
-
     margin-bottom:50px;
 }
 
 .titulo-secao span{
     color:var(--bordo);
-
     font-weight:700;
-
     letter-spacing:2px;
 }
 
 .titulo-secao h2{
-    font-size:2.5rem;
-
+    font-size:2.4rem;
     margin-top:10px;
 }
 
@@ -299,15 +238,15 @@ section{
     display:block;
 
     width:80px;
-
     height:4px;
 
     background:var(--bordo);
 
     margin:15px auto 0;
 
-    border-radius:50px;
+    border-radius:999px;
 }
+
 /* =========================
    SOBRE
 ========================= */
@@ -320,9 +259,7 @@ section{
 
 .texto-sobre p{
     margin-bottom:15px;
-    font-size:1.05rem;
 }
-
 /* =========================
    CARDS
 ========================= */
@@ -331,21 +268,15 @@ section{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
-
     margin-top:40px;
 }
 
 .card{
     background:white;
-
     padding:30px;
-
     border-radius:20px;
-
     text-align:center;
-
     box-shadow:var(--sombra);
-
     transition:.3s;
 }
 
@@ -355,68 +286,49 @@ section{
 
 .card i{
     font-size:2.5rem;
-
     color:var(--bordo);
-
     margin-bottom:20px;
 }
 
 .card h3{
-    margin-bottom:15px;
-
     color:var(--bordo);
+    margin-bottom:12px;
 }
 
 /* =========================
-   CURIOSIDADES
+   TIPOS E AJUDA
 ========================= */
 
-.curiosidades{
-    background:#fff3f6;
-}
-
-.curiosidades-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.curiosidade{
-    background:white;
-
-    padding:25px;
-
-    border-radius:20px;
-
-    box-shadow:var(--sombra);
-}
-
-.curiosidade h3{
-    margin-bottom:10px;
-
-    color:var(--bordo);
-}
-
-/* =========================
-   FRASE IMPACTO
-========================= */
-
-.frase-impacto{
-    background:var(--bordo);
-
-    color:white;
-
-    text-align:center;
-}
-
-.frase-container{
-    max-width:900px;
+.tipos,
+.ajuda{
+    max-width:1200px;
     margin:auto;
 }
 
-.frase-container h2{
+/* =========================
+   FRASE
+========================= */
+
+.frase{
+    background:linear-gradient(
+        135deg,
+        var(--bordo),
+        #9B3A5C
+    );
+
+    color:white;
+    text-align:center;
+}
+
+.frase h2{
+    margin-bottom:20px;
     font-size:2rem;
-    font-weight:600;
+}
+
+.texto-frase{
+    max-width:850px;
+    margin:auto;
+    font-size:1.1rem;
 }
 
 /* =========================
@@ -427,18 +339,39 @@ section{
     text-align:center;
 }
 
-.cta-content{
-    max-width:800px;
-    margin:auto;
-}
-
 .cta h2{
-    font-size:2.4rem;
+    font-size:2.2rem;
     margin-bottom:15px;
+    color:var(--bordo);
 }
 
 .cta p{
-    margin-bottom:30px;
+    max-width:700px;
+    margin:0 auto 35px auto;
+}
+
+.cta .botao,
+.cta .btn-principal{
+    display:inline-block;
+    margin-top:10px;
+}
+
+/* =========================
+   BOTÃO PADRÃO
+========================= */
+
+.botao{
+    background:var(--bordo);
+    color:white;
+    padding:14px 28px;
+    border-radius:40px;
+    transition:.3s;
+    display:inline-block;
+}
+
+.botao:hover{
+    background:var(--bordo-hover);
+    transform:translateY(-3px);
 }
 
 /* =========================
@@ -451,74 +384,40 @@ footer{
 }
 
 .footer-container{
+    max-width:1200px;
+    margin:auto;
+
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
     gap:30px;
 
-    padding:60px 8%;
+    padding:60px 20px;
 }
 
-.footer-coluna h3{
-    margin-bottom:15px;
-}
-
-.footer-coluna ul{
+.footer-links ul{
     list-style:none;
 }
 
-.footer-coluna li{
+.footer-links li{
     margin-bottom:10px;
 }
 
-.footer-coluna a{
+.footer-links a{
     color:white;
 }
 
-.footer-coluna a:hover{
+.footer-links a:hover{
     text-decoration:underline;
 }
 
-.footer-bottom{
-    text-align:center;
-
-    padding:20px;
-
-    border-top:1px solid rgba(255,255,255,.15);
+.footer-contato p{
+    margin-top:10px;
 }
 
-/* =========================
-   BOTÃO TOPO
-========================= */
-
-#topoBtn{
-    position:fixed;
-
-    right:20px;
-    bottom:20px;
-
-    width:50px;
-    height:50px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:var(--bordo);
-
-    color:white;
-
-    font-size:1.1rem;
-
-    cursor:pointer;
-
-    box-shadow:var(--sombra);
-
-    transition:.3s;
-}
-
-#topoBtn:hover{
-    transform:scale(1.1);
+footer p,
+footer li{
+    opacity:.95;
 }
 
 /* =========================
@@ -538,38 +437,40 @@ body.dark-mode .menu a{
     color:white;
 }
 
-body.dark-mode .card,
-body.dark-mode .curiosidade{
+body.dark-mode .card{
     background:#302428;
     color:white;
 }
 
-body.dark-mode .curiosidades{
-    background:#241B1E;
+body.dark-mode .card h3{
+    color:#F0B7C8;
 }
 
-body.dark-mode .titulo-secao h2{
-    color:white;
+body.dark-mode .frase{
+    background:#411222;
 }
 
-body.dark-mode .texto-sobre{
-    color:#F5EEF1;
+body.dark-mode footer{
+    background:#1A1013;
 }
 
 /* =========================
    RESPONSIVIDADE
 ========================= */
 
-@media(max-width:1000px){
+@media(max-width:900px){
 
     .hero-content{
         grid-template-columns:1fr;
         text-align:center;
     }
 
-    .hero-text p{
-        margin-left:auto;
-        margin-right:auto;
+    .hero-text{
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:3rem;
     }
 
     .hero-buttons{
@@ -577,33 +478,27 @@ body.dark-mode .texto-sobre{
     }
 
     .hero-image{
-        margin-top:20px;
+        order:-1;
     }
 
-}
-
-@media(max-width:850px){
+    .menu{
+        justify-content:center;
+    }
 
     .navbar{
         flex-direction:column;
         gap:15px;
     }
-
-    .menu{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
 }
 
 @media(max-width:600px){
 
     section{
-        padding:70px 6%;
+        padding:65px 18px;
     }
 
     .hero-text h1{
-        font-size:2.5rem;
+        font-size:2.3rem;
     }
 
     .hero-text h2{
@@ -611,21 +506,26 @@ body.dark-mode .texto-sobre{
     }
 
     .titulo-secao h2{
-        font-size:2rem;
+        font-size:1.9rem;
     }
 
-    .impacto h2{
-        font-size:1.8rem;
+    .frase h2{
+        font-size:1.5rem;
     }
 
-    .frase-container h2{
-        font-size:1.4rem;
+    .menu{
+        gap:12px;
+        font-size:.9rem;
     }
 
+    .botao,
     .btn-principal,
     .btn-secundario{
         width:100%;
         text-align:center;
     }
 
+    .hero-image img{
+        max-width:320px;
+    }
 }
