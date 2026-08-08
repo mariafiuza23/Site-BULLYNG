@@ -1,4 +1,272 @@
 /* =========================
+   VOZ CONTRA O BULLYING
+   SCRIPT PRINCIPAL
+========================= */
+
+
+/* =========================
+   MODO ESCURO
+========================= */
+
+const darkModeBtn = document.getElementById("darkModeBtn");
+
+if (darkModeBtn) {
+
+    const icone = darkModeBtn.querySelector("i");
+
+    // Recupera preferência salva
+    if (localStorage.getItem("modoEscuro") === "ativo") {
+
+        document.body.classList.add("dark-mode");
+
+        if (icone) {
+            icone.classList.remove("fa-moon");
+            icone.classList.add("fa-sun");
+        }
+
+    }
+
+    darkModeBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark-mode");
+
+        const modoAtivo =
+            document.body.classList.contains("dark-mode");
+
+        localStorage.setItem(
+            "modoEscuro",
+            modoAtivo ? "ativo" : "inativo"
+        );
+
+        if (icone) {
+
+            if (modoAtivo) {
+
+                icone.classList.remove("fa-moon");
+                icone.classList.add("fa-sun");
+
+            } else {
+
+                icone.classList.remove("fa-sun");
+                icone.classList.add("fa-moon");
+
+            }
+
+        }
+
+    });
+
+}
+
+
+/* =========================
+   BOTÃO VOLTAR AO TOPO
+========================= */
+
+const topoBtn = document.getElementById("topoBtn");
+
+if (topoBtn) {
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 300) {
+
+            topoBtn.classList.add("mostrar");
+
+        } else {
+
+            topoBtn.classList.remove("mostrar");
+
+        }
+
+    });
+
+
+    topoBtn.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
+
+
+/* =========================
+   AUMENTAR / DIMINUIR FONTE
+========================= */
+
+const aumentarFonte =
+    document.getElementById("aumentarFonte");
+
+const diminuirFonte =
+    document.getElementById("diminuirFonte");
+
+const resetarFonte =
+    document.getElementById("resetarFonte");
+
+let tamanhoFonte = 100;
+
+
+function aplicarFonte() {
+
+    document.documentElement.style.fontSize =
+        tamanhoFonte + "%";
+
+}
+
+
+if (aumentarFonte) {
+
+    aumentarFonte.addEventListener("click", () => {
+
+        if (tamanhoFonte < 125) {
+
+            tamanhoFonte += 5;
+            aplicarFonte();
+
+        }
+
+    });
+
+}
+
+
+if (diminuirFonte) {
+
+    diminuirFonte.addEventListener("click", () => {
+
+        if (tamanhoFonte > 90) {
+
+            tamanhoFonte -= 5;
+            aplicarFonte();
+
+        }
+
+    });
+
+}
+
+
+if (resetarFonte) {
+
+    resetarFonte.addEventListener("click", () => {
+
+        tamanhoFonte = 100;
+        aplicarFonte();
+
+    });
+
+}
+
+
+/* =========================
+   PORTAL DE ESCUTA
+========================= */
+
+const desabafo =
+    document.getElementById("desabafo");
+
+const enviarDesabafo =
+    document.getElementById("enviarDesabafo");
+
+const mensagemEscuta =
+    document.getElementById("mensagemEscuta");
+
+
+if (
+    desabafo &&
+    enviarDesabafo &&
+    mensagemEscuta
+) {
+
+    enviarDesabafo.addEventListener("click", () => {
+
+        if (desabafo.value.trim() === "") {
+
+            mensagemEscuta.innerHTML = `
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <div>
+                    <strong>Você pode escrever.</strong>
+
+                    <p>
+                        Coloque seus sentimentos em palavras,
+                        do seu jeito e no seu tempo.
+                    </p>
+                </div>
+            `;
+
+            mensagemEscuta.className =
+                "mensagem-escuta mostrar aviso";
+
+            return;
+
+        }
+
+
+        mensagemEscuta.innerHTML = `
+            <i class="fa-solid fa-heart"></i>
+
+            <div>
+                <strong>Obrigado por compartilhar.</strong>
+
+                <p>
+                    Seus sentimentos são importantes.
+                    Se algo estiver acontecendo com você,
+                    converse também com uma pessoa adulta
+                    de confiança.
+                </p>
+            </div>
+        `;
+
+        mensagemEscuta.className =
+            "mensagem-escuta mostrar sucesso";
+
+        desabafo.value = "";
+
+    });
+
+}
+
+
+/* =========================
+   ANIMAÇÃO AO APARECER
+========================= */
+
+const elementosAnimados =
+    document.querySelectorAll(".card, .referencia-card, .frases-desafio > div");
+
+
+const observador =
+    new IntersectionObserver((elementos) => {
+
+        elementos.forEach((elemento) => {
+
+            if (elemento.isIntersecting) {
+
+                elemento.target.classList.add("aparecer");
+
+                observador.unobserve(elemento.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+
+elementosAnimados.forEach((elemento) => {
+
+    observador.observe(elemento);
+
+});
+
+/* =========================
    DESAFIO INTERATIVO
 ========================= */
 
