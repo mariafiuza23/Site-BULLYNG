@@ -562,6 +562,351 @@ body.dark-mode .titulo-secao span{
     color:#F7D6E2;
 }
 /* =========================
+   DESAFIO INTERATIVO
+========================= */
+
+.desafio{
+    background:var(--creme);
+}
+
+.desafio .titulo-secao{
+    max-width:850px;
+    margin:0 auto 50px;
+}
+
+.desafio .titulo-secao h1{
+    color:var(--bordo);
+    font-size:3rem;
+    margin:10px 0 15px;
+}
+
+.desafio .titulo-secao p{
+    font-size:1.1rem;
+    max-width:700px;
+    margin:auto;
+}
+
+.desafio-card{
+    max-width:850px;
+    margin:auto;
+    background:#fff;
+    border-radius:28px;
+    padding:40px;
+    box-shadow:var(--sombra);
+}
+
+/* TOPO DO DESAFIO */
+
+.desafio-topo{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:35px;
+}
+
+.desafio-icone{
+    width:55px;
+    height:55px;
+    border-radius:18px;
+    background:var(--rosa-claro);
+    color:var(--bordo);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.5rem;
+    flex-shrink:0;
+}
+
+.progresso-texto{
+    display:block;
+    color:#6D5960;
+    font-size:.95rem;
+    margin-bottom:8px;
+}
+
+.progresso-texto strong{
+    color:var(--bordo);
+}
+
+.barra-progresso{
+    width:100%;
+    height:8px;
+    background:#F0DDE4;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progresso{
+    height:100%;
+    width:33.33%;
+    background:var(--bordo);
+    border-radius:20px;
+    transition:.4s ease;
+}
+
+/* PERGUNTA */
+
+#pergunta{
+    color:var(--texto);
+    font-size:1.8rem;
+    line-height:1.4;
+    margin-bottom:30px;
+}
+
+/* ALTERNATIVAS */
+
+.opcoes{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.opcao{
+    width:100%;
+    min-height:70px;
+    padding:16px 20px;
+    border:2px solid #EAD5DD;
+    border-radius:16px;
+    background:#FFF9FB;
+    color:var(--texto);
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-align:left;
+    font-family:'Poppins',sans-serif;
+    font-size:1rem;
+    line-height:1.4;
+    cursor:pointer;
+    transition:.25s ease;
+}
+
+.opcao i{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:var(--rosa-claro);
+    color:var(--bordo);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    font-size:1rem;
+}
+
+.opcao span{
+    flex:1;
+}
+
+.opcao:hover:not(:disabled){
+    border-color:var(--bordo);
+    background:#FFF1F5;
+    transform:translateY(-2px);
+    box-shadow:0 7px 18px rgba(122,31,61,.10);
+}
+
+.opcao:disabled{
+    cursor:default;
+}
+
+/* RESPOSTA CERTA */
+
+.opcao.certa{
+    border-color:#4E8B65;
+    background:#EDF8F0;
+    color:#28583A;
+}
+
+.opcao.certa i{
+    background:#D8EFDF;
+    color:#35734D;
+}
+
+/* RESPOSTA ERRADA */
+
+.opcao.errada{
+    border-color:#C46B75;
+    background:#FFF0F1;
+    color:#71353C;
+}
+
+.opcao.errada i{
+    background:#F7D8DC;
+    color:#A53F4C;
+}
+
+/* FEEDBACK */
+
+.feedback{
+    display:none;
+    margin-top:20px;
+    padding:18px 20px;
+    border-radius:16px;
+    align-items:flex-start;
+    gap:14px;
+    line-height:1.5;
+}
+
+.feedback.mostrar{
+    display:flex;
+}
+
+.feedback i{
+    font-size:1.4rem;
+    margin-top:2px;
+}
+
+.feedback strong{
+    display:block;
+    margin-bottom:4px;
+}
+
+.feedback p{
+    margin:0;
+}
+
+.feedback.certo{
+    background:#EDF8F0;
+    color:#28583A;
+    border:1px solid #B9DFC4;
+}
+
+.feedback.errado{
+    background:#FFF0F1;
+    color:#71353C;
+    border:1px solid #E8B8BE;
+}
+
+/* BOTÃO PRÓXIMA SITUAÇÃO */
+
+#proximaPergunta{
+    display:none;
+    margin-top:25px;
+    border:none;
+    background:var(--bordo);
+    color:#fff;
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+
+#proximaPergunta:hover{
+    background:var(--bordo-hover);
+    transform:translateY(-2px);
+}
+
+/* RESULTADO */
+
+.resultado{
+    display:none;
+    text-align:center;
+    padding:25px 10px 10px;
+}
+
+.resultado.mostrar{
+    display:block;
+}
+
+.resultado-icone{
+    width:75px;
+    height:75px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    background:var(--rosa-claro);
+    color:var(--bordo);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2rem;
+}
+
+.resultado h2{
+    color:var(--bordo);
+    font-size:2rem;
+    margin-bottom:12px;
+}
+
+.resultado p{
+    margin-bottom:12px;
+}
+
+.resultado .btn-principal{
+    margin-top:15px;
+    background:var(--bordo);
+    color:#fff;
+    border:none;
+    cursor:pointer;
+}
+
+/* FRASES */
+
+.frases-desafio{
+    max-width:850px;
+    margin:40px auto 0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.frases-desafio > div{
+    background:#fff;
+    padding:25px 20px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:var(--sombra);
+}
+
+.frases-desafio i{
+    color:var(--bordo);
+    font-size:1.7rem;
+    margin-bottom:12px;
+}
+
+.frases-desafio p{
+    font-size:.95rem;
+}
+
+/* =========================
+   DESAFIO - MODO ESCURO
+========================= */
+
+body.dark-mode .desafio{
+    background:#1E171A;
+}
+
+body.dark-mode .desafio-card{
+    background:#302428;
+}
+
+body.dark-mode #pergunta{
+    color:#F5EEF1;
+}
+
+body.dark-mode .opcao{
+    background:#261D20;
+    border-color:#594149;
+    color:#F5EEF1;
+}
+
+body.dark-mode .opcao:hover:not(:disabled){
+    background:#35262B;
+    border-color:#DCA7B8;
+}
+
+body.dark-mode .opcao i{
+    background:#402D34;
+    color:#F2B5C7;
+}
+
+body.dark-mode .frases-desafio > div{
+    background:#302428;
+    color:#F5EEF1;
+}
+
+body.dark-mode .progresso-texto{
+    color:#D9C7CD;
+}
+/* =========================
    RESPONSIVIDADE
 ========================= */
 
@@ -630,6 +975,77 @@ body.dark-mode .titulo-secao span{
 
     .footer-logo h2{
         justify-content:center;
+    }
+    /* DESAFIO NO CELULAR */
+
+    .desafio .titulo-secao h1{
+        font-size:2.1rem;
+    }
+
+    .desafio .titulo-secao p{
+        font-size:1rem;
+    }
+
+    .desafio-card{
+        padding:25px 18px;
+        border-radius:22px;
+    }
+
+    .desafio-topo{
+        gap:12px;
+        margin-bottom:28px;
+    }
+
+    .desafio-icone{
+        width:48px;
+        height:48px;
+        font-size:1.2rem;
+    }
+
+    #pergunta{
+        font-size:1.45rem;
+        line-height:1.4;
+    }
+
+    .opcao{
+        min-height:64px;
+        padding:13px 14px;
+        font-size:.92rem;
+        gap:11px;
+        border-radius:14px;
+    }
+
+    .opcao i{
+        width:34px;
+        height:34px;
+        font-size:.9rem;
+    }
+
+    .feedback{
+        font-size:.9rem;
+        padding:15px;
+    }
+
+    #proximaPergunta{
+        width:100%;
+    }
+
+    .frases-desafio{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .frases-desafio > div{
+        display:flex;
+        align-items:center;
+        gap:15px;
+        text-align:left;
+        padding:18px;
+    }
+
+    .frases-desafio i{
+        margin:0;
+        flex-shrink:0;
     }
 
 }
