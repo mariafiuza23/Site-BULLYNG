@@ -1351,3 +1351,14 @@ body.dark-mode .frases-desafio i{
         font-size:.82rem;
     }
 }
+/* =========================
+   COR DOS TEXTOS DOS CARDS NO MODO ESCURO
+========================= */
+
+body.dark-mode .card p{
+    color:#F2B5C7;
+}
+
+body.dark-mode .frases-desafio p{
+    color:#F2B5C7;
+}
