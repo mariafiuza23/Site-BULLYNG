@@ -1,4 +1,5 @@
-/* =========================
+
+  /* =========================
    RESET E VARIÁVEIS
 ========================= */
 
@@ -144,6 +145,7 @@ section{
     border:none;
     border-radius:50%;
     background:#fff;
+    color:var(--bordo);
     cursor:pointer;
     transition:.3s;
 }
@@ -237,6 +239,7 @@ section{
     background:#fff;
     color:var(--bordo);
 }
+
 /* =========================
    TÍTULOS DAS SEÇÕES
 ========================= */
@@ -512,6 +515,7 @@ footer{
     font-size:1.2rem;
     box-shadow:var(--sombra);
     transition:.3s;
+    z-index:999;
 }
 
 #topoBtn:hover{
@@ -520,24 +524,11 @@ footer{
 }
 
 /* =========================
-   DARK MODE
+   DARK MODE - GERAL
 ========================= */
 
 body.dark-mode{
     background:#1E171A;
-    color:#F5EEF1;
-}
-
-body.dark-mode .card{
-    background:#302428;
-    color:#fff;
-}
-
-body.dark-mode .card h3{
-    color:#F2B5C7;
-}
-
-body.dark-mode .texto-sobre p{
     color:#F5EEF1;
 }
 
@@ -546,12 +537,34 @@ body.dark-mode .ajuda{
     background:#251A1E;
 }
 
-body.dark-mode .curiosidades{
+body.dark-mode .curiosidades,
+body.dark-mode .desafio{
     background:#1E171A;
 }
 
-body.dark-mode footer{
-    background:#140C0F;
+body.dark-mode .card{
+    background:#302428;
+    color:#F5EEF1;
+}
+
+body.dark-mode .card p{
+    color:#F5EEF1;
+}
+
+body.dark-mode .card h3{
+    color:#F2B5C7;
+}
+
+body.dark-mode .card i{
+    color:#F2B5C7;
+}
+
+body.dark-mode .texto-sobre p{
+    color:#F5EEF1;
+}
+
+body.dark-mode .cta p{
+    color:#F5EEF1;
 }
 
 body.dark-mode .titulo-secao h2{
@@ -561,13 +574,23 @@ body.dark-mode .titulo-secao h2{
 body.dark-mode .titulo-secao span{
     color:#F7D6E2;
 }
+
+body.dark-mode .apoio .card li{
+    color:#F5EEF1;
+}
+
+body.dark-mode footer{
+    background:#140C0F;
+}
+
+body.dark-mode #darkModeBtn{
+    background:#F5EEF1;
+    color:var(--bordo);
+}
+
 /* =========================
    DESAFIO INTERATIVO
 ========================= */
-
-.desafio{
-    background:var(--creme);
-}
 
 .desafio .titulo-secao{
     max-width:850px;
@@ -593,6 +616,7 @@ body.dark-mode .titulo-secao span{
     border-radius:28px;
     padding:40px;
     box-shadow:var(--sombra);
+    border:1px solid rgba(122,31,61,.08);
 }
 
 /* TOPO DO DESAFIO */
@@ -695,6 +719,7 @@ body.dark-mode .titulo-secao span{
 
 .opcao span{
     flex:1;
+    color:inherit;
 }
 
 .opcao:hover:not(:disabled){
@@ -733,8 +758,9 @@ body.dark-mode .titulo-secao span{
     background:#F7D8DC;
     color:#A53F4C;
 }
-
-/* FEEDBACK */
+/* =========================
+   FEEDBACK
+========================= */
 
 .feedback{
     display:none;
@@ -748,6 +774,7 @@ body.dark-mode .titulo-secao span{
 
 .feedback.mostrar{
     display:flex;
+    animation:aparecer .35s ease;
 }
 
 .feedback i{
@@ -776,7 +803,9 @@ body.dark-mode .titulo-secao span{
     border:1px solid #E8B8BE;
 }
 
-/* BOTÃO PRÓXIMA SITUAÇÃO */
+/* =========================
+   BOTÃO PRÓXIMA SITUAÇÃO
+========================= */
 
 #proximaPergunta{
     display:none;
@@ -795,7 +824,9 @@ body.dark-mode .titulo-secao span{
     transform:translateY(-2px);
 }
 
-/* RESULTADO */
+/* =========================
+   RESULTADO
+========================= */
 
 .resultado{
     display:none;
@@ -805,6 +836,7 @@ body.dark-mode .titulo-secao span{
 
 .resultado.mostrar{
     display:block;
+    animation:aparecer .5s ease;
 }
 
 .resultado-icone{
@@ -828,6 +860,7 @@ body.dark-mode .titulo-secao span{
 
 .resultado p{
     margin-bottom:12px;
+    color:var(--texto);
 }
 
 .resultado .btn-principal{
@@ -838,7 +871,13 @@ body.dark-mode .titulo-secao span{
     cursor:pointer;
 }
 
-/* FRASES */
+.resultado .btn-principal:hover{
+    background:var(--bordo-hover);
+}
+
+/* =========================
+   FRASES DO DESAFIO
+========================= */
 
 .frases-desafio{
     max-width:850px;
@@ -864,18 +903,41 @@ body.dark-mode .titulo-secao span{
 
 .frases-desafio p{
     font-size:.95rem;
+    color:var(--texto);
 }
 
 /* =========================
    DESAFIO - MODO ESCURO
 ========================= */
 
-body.dark-mode .desafio{
-    background:#1E171A;
-}
-
 body.dark-mode .desafio-card{
     background:#302428;
+    border-color:#49343B;
+}
+
+body.dark-mode .desafio .titulo-secao h1{
+    color:#F2B5C7;
+}
+
+body.dark-mode .desafio .titulo-secao p{
+    color:#F5EEF1;
+}
+
+body.dark-mode .desafio-icone{
+    background:#402D34;
+    color:#F2B5C7;
+}
+
+body.dark-mode .progresso-texto{
+    color:#D9C7CD;
+}
+
+body.dark-mode .progresso-texto strong{
+    color:#F2B5C7;
+}
+
+body.dark-mode .barra-progresso{
+    background:#49343B;
 }
 
 body.dark-mode #pergunta{
@@ -888,12 +950,63 @@ body.dark-mode .opcao{
     color:#F5EEF1;
 }
 
+body.dark-mode .opcao span{
+    color:#F5EEF1;
+}
+
+body.dark-mode .opcao i{
+    background:#402D34;
+    color:#F2B5C7;
+}
+
 body.dark-mode .opcao:hover:not(:disabled){
     background:#35262B;
     border-color:#DCA7B8;
 }
 
-body.dark-mode .opcao i{
+body.dark-mode .opcao.certa{
+    background:#26382D;
+    border-color:#6AA56A;
+    color:#DDF2E2;
+}
+
+body.dark-mode .opcao.certa i{
+    background:#477C54;
+    color:#fff;
+}
+
+body.dark-mode .opcao.errada{
+    background:#3A292C;
+    border-color:#C96A6A;
+    color:#FFDDE0;
+}
+
+body.dark-mode .opcao.errada i{
+    background:#914C55;
+    color:#fff;
+}
+
+body.dark-mode .feedback.certo{
+    background:#26382D;
+    color:#DDF2E2;
+    border-color:#477C54;
+}
+
+body.dark-mode .feedback.errado{
+    background:#3A292C;
+    color:#FFDDE0;
+    border-color:#914C55;
+}
+
+body.dark-mode .resultado h2{
+    color:#F2B5C7;
+}
+
+body.dark-mode .resultado p{
+    color:#F5EEF1;
+}
+
+body.dark-mode .resultado-icone{
     background:#402D34;
     color:#F2B5C7;
 }
@@ -903,8 +1016,28 @@ body.dark-mode .frases-desafio > div{
     color:#F5EEF1;
 }
 
-body.dark-mode .progresso-texto{
-    color:#D9C7CD;
+body.dark-mode .frases-desafio p{
+    color:#F5EEF1;
+}
+
+body.dark-mode .frases-desafio i{
+    color:#F2B5C7;
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 /* =========================
    RESPONSIVIDADE
@@ -976,7 +1109,8 @@ body.dark-mode .progresso-texto{
     .footer-logo h2{
         justify-content:center;
     }
-    /* DESAFIO NO CELULAR */
+
+    /* DESAFIO */
 
     .desafio .titulo-secao h1{
         font-size:2.1rem;
@@ -1047,13 +1181,28 @@ body.dark-mode .progresso-texto{
         margin:0;
         flex-shrink:0;
     }
-
 }
+
+/* =========================
+   CELULAR
+========================= */
 
 @media (max-width:600px){
 
     section{
         padding:70px 18px;
+    }
+
+    .navbar{
+        padding:18px 15px;
+    }
+
+    .logo h2{
+        font-size:1.15rem;
+    }
+
+    .logo p{
+        font-size:.78rem;
     }
 
     .menu{
@@ -1065,12 +1214,21 @@ body.dark-mode .progresso-texto{
         font-size:.95rem;
     }
 
+    #darkModeBtn{
+        width:42px;
+        height:42px;
+    }
+
     .hero h1{
         font-size:2.2rem;
     }
 
     .hero h2{
         font-size:1.2rem;
+    }
+
+    .hero p{
+        font-size:.95rem;
     }
 
     .tag{
@@ -1110,342 +1268,86 @@ body.dark-mode .progresso-texto{
         font-size:2rem;
     }
 
-    #topoBtn{
-        width:46px;
-        height:46px;
+    /* DESAFIO NO CELULAR */
+
+    .desafio{
+        padding-left:14px;
+        padding-right:14px;
     }
 
-}
-/* =========================
-   DESAFIO / QUIZ
-========================= */
-
-.desafio{
-    max-width:900px;
-    margin:auto;
-}
-
-.desafio-card{
-    background:var(--branco);
-    border:1px solid rgba(122,31,61,.08);
-    border-radius:28px;
-    padding:40px;
-    box-shadow:var(--sombra);
-}
-
-.progresso{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    margin-bottom:25px;
-    color:var(--bordo);
-    font-weight:700;
-}
-
-.progresso-barra{
-    flex:1;
-    height:9px;
-    background:var(--rosa-claro);
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.progresso-barra span{
-    display:block;
-    height:100%;
-    width:33.33%;
-    background:var(--bordo);
-    border-radius:20px;
-    transition:.4s ease;
-}
-
-.desafio-card h2{
-    color:var(--bordo);
-    font-size:2rem;
-    line-height:1.3;
-    margin-bottom:12px;
-}
-
-.desafio-card > p{
-    color:var(--texto);
-    margin-bottom:30px;
-}
-
-.opcoes{
-    display:grid;
-    gap:14px;
-}
-
-.opcao{
-    width:100%;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    padding:18px 20px;
-    border:2px solid #E9DCE1;
-    border-radius:18px;
-    background:#fff;
-    color:var(--texto);
-    font-family:'Poppins',sans-serif;
-    font-size:1rem;
-    font-weight:500;
-    text-align:left;
-    cursor:pointer;
-    transition:.25s ease;
-}
-
-.opcao i{
-    width:40px;
-    height:40px;
-    min-width:40px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:var(--rosa-claro);
-    color:var(--bordo);
-    font-size:1.1rem;
-    transition:.25s ease;
-}
-
-.opcao:hover{
-    border-color:var(--bordo);
-    background:#FFF8FA;
-    transform:translateY(-3px);
-    box-shadow:0 8px 20px rgba(122,31,61,.10);
-}
-
-.opcao:hover i{
-    background:var(--bordo);
-    color:#fff;
-}
-
-.opcao:active{
-    transform:scale(.98);
-}
-
-.opcao.certa{
-    border-color:#6AA56A;
-    background:#F0FAF0;
-}
-
-.opcao.certa i{
-    background:#6AA56A;
-    color:#fff;
-}
-
-.opcao.errada{
-    border-color:#C96A6A;
-    background:#FFF1F1;
-}
-
-.opcao.errada i{
-    background:#C96A6A;
-    color:#fff;
-}
-
-.feedback{
-    display:none;
-    margin-top:20px;
-    padding:18px 20px;
-    border-radius:18px;
-    font-weight:500;
-}
-
-.feedback.mostrar{
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-    animation:aparecer .35s ease;
-}
-
-.feedback.certo{
-    background:#F0FAF0;
-    color:#356B35;
-}
-
-.feedback.errado{
-    background:#FFF1F1;
-    color:#8A3838;
-}
-
-.feedback i{
-    margin-top:4px;
-}
-
-.botao-proxima{
-    display:none;
-    margin:25px auto 0;
-    border:none;
-    cursor:pointer;
-    background:var(--bordo);
-    color:#fff;
-    padding:14px 30px;
-    border-radius:40px;
-    font-family:'Poppins',sans-serif;
-    font-weight:600;
-    font-size:1rem;
-    transition:.3s;
-}
-
-.botao-proxima.mostrar{
-    display:block;
-}
-
-.botao-proxima:hover{
-    background:var(--bordo-hover);
-    transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(122,31,61,.20);
-}
-
-.resultado{
-    display:none;
-    text-align:center;
-    padding:45px 30px;
-    background:var(--branco);
-    border-radius:28px;
-    box-shadow:var(--sombra);
-    animation:aparecer .5s ease;
-}
-
-.resultado.mostrar{
-    display:block;
-}
-
-.resultado i{
-    font-size:3.5rem;
-    color:var(--bordo);
-    margin-bottom:20px;
-}
-
-.resultado h2{
-    color:var(--bordo);
-    font-size:2.2rem;
-    margin-bottom:12px;
-}
-
-.resultado p{
-    margin-bottom:25px;
-}
-
-.tentar-novamente{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    border:2px solid var(--bordo);
-    background:transparent;
-    color:var(--bordo);
-    padding:13px 28px;
-    border-radius:40px;
-    font-family:'Poppins',sans-serif;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.tentar-novamente:hover{
-    background:var(--bordo);
-    color:#fff;
-}
-
-@keyframes aparecer{
-    from{
-        opacity:0;
-        transform:translateY(12px);
+    .desafio .titulo-secao{
+        margin-bottom:35px;
     }
 
-    to{
-        opacity:1;
-        transform:translateY(0);
+    .desafio .titulo-secao h1{
+        font-size:1.9rem;
     }
-}
-
-/* =========================
-   QUIZ - MODO ESCURO
-========================= */
-
-body.dark-mode .desafio-card,
-body.dark-mode .resultado{
-    background:#302428;
-    color:#F5EEF1;
-}
-
-body.dark-mode .desafio-card > p,
-body.dark-mode .resultado p{
-    color:#F5EEF1;
-}
-
-body.dark-mode .opcao{
-    background:#382C30;
-    border-color:#59464C;
-    color:#fff;
-}
-
-body.dark-mode .opcao:hover{
-    background:#44343A;
-    border-color:#DCA7B8;
-}
-
-body.dark-mode .opcao i{
-    background:#513943;
-    color:#F2B5C7;
-}
-
-body.dark-mode .feedback.certo{
-    background:#263A2A;
-    color:#BCE0BC;
-}
-
-body.dark-mode .feedback.errado{
-    background:#40292C;
-    color:#F0B0B0;
-}
-
-/* =========================
-   QUIZ - CELULAR
-========================= */
-
-@media(max-width:600px){
 
     .desafio-card{
-        padding:25px 18px;
-        border-radius:22px;
+        padding:22px 15px;
+        border-radius:20px;
     }
 
-    .progresso{
-        font-size:.9rem;
+    .desafio-topo{
+        align-items:flex-start;
     }
 
-    .desafio-card h2{
-        font-size:1.55rem;
-    }
-
-    .desafio-card > p{
-        font-size:.95rem;
+    #pergunta{
+        font-size:1.3rem;
+        line-height:1.45;
     }
 
     .opcao{
-        padding:15px;
-        gap:12px;
-        font-size:.92rem;
-        border-radius:16px;
+        min-height:60px;
+        padding:12px;
+        font-size:.88rem;
+        gap:10px;
     }
 
     .opcao i{
-        width:36px;
-        height:36px;
-        min-width:36px;
-        font-size:1rem;
+        width:32px;
+        height:32px;
+        min-width:32px;
+        font-size:.82rem;
+    }
+
+    .feedback{
+        font-size:.85rem;
+        padding:14px;
     }
 
     .resultado{
-        padding:35px 20px;
-        border-radius:22px;
+        padding:20px 5px;
     }
 
     .resultado h2{
-        font-size:1.8rem;
+        font-size:1.7rem;
     }
 
+    .frases-desafio > div{
+        padding:16px;
+    }
+
+    .frases-desafio p{
+        font-size:.9rem;
+    }
+
+    #topoBtn{
+        width:46px;
+        height:46px;
+        right:16px;
+        bottom:16px;
+    }
+
+    footer{
+        margin-top:50px;
+    }
+
+    .footer-container{
+        padding:45px 20px;
+    }
+
+    .footer-bottom{
+        font-size:.82rem;
+    }
 }
