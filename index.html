@@ -1,386 +1,1753 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voz Contra o Bullying</title>
-<meta name="description" content="Projeto educativo sobre bullying, respeito, empatia e conscientização.">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Voz Contra o Bullying — projeto educativo sobre respeito, empatia, inclusão e combate ao bullying.">
+
+    <meta
+        name="theme-color"
+        content="#7A1F3D">
+
+    <title>Voz Contra o Bullying</title>
+
+
+    <!-- ==================== FONTES ==================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ==================== ÍCONES ==================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- ==================== CSS ==================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
 </head>
+
 
 <body>
 
-<header class="hero-header">
 
-<nav class="navbar">
+    <!-- =================================================
+         CABEÇALHO
+         ================================================= -->
 
-<div class="logo">
-<i class="fa-solid fa-shield-heart"></i>
-<div>
-<h2>Voz Contra o Bullying</h2>
-<p>Respeito • Empatia • Inclusão</p>
-</div>
-</div>
+    <header class="hero-header">
 
-<ul class="menu">
-<li><a href="#inicio">Início</a></li>
-<li><a href="#sobre">O que é?</a></li>
-<li><a href="#tipos">Tipos</a></li>
-<li><a href="#ajuda">Como ajudar</a></li>
-<li><a href="#apoio">Canais de Apoio</a></li>
-<li><a href="escuta.html">Portal de Escuta</a></li>
-<li><a href="quiz.html">Quiz</a></li>
-<li><a href="referencias.html">Referências</a></li>
-</ul>
+        <nav
+            class="navbar"
+            aria-label="Navegação principal">
 
-<button id="darkModeBtn">
-<i class="fa-solid fa-moon"></i>
-</button>
 
-</nav>
+            <!-- LOGO -->
 
-<section id="inicio" class="hero">
+            <a
+                href="#inicio"
+                class="logo"
+                aria-label="Voz Contra o Bullying - início">
 
-<div class="hero-content">
+                <i class="fa-solid fa-shield-heart"></i>
 
-<div class="hero-text">
+                <div>
 
-<span class="tag">
-Projeto Escolar de Conscientização
-</span>
+                    <h2>
+                        Voz Contra o Bullying
+                    </h2>
 
-<h1>Sua voz pode transformar vidas.</h1>
+                    <p>
+                        Respeito • Empatia • Inclusão
+                    </p>
 
-<h2>
-Juntos podemos construir uma escola com mais respeito, empatia e inclusão.
-</h2>
+                </div>
 
-<p>
-O <strong>Voz Contra o Bullying</strong> nasceu para conscientizar estudantes, incentivar o respeito e mostrar que toda pessoa merece estudar em um ambiente seguro, acolhedor e livre de violência.
-</p>
+            </a>
 
-<div class="hero-buttons">
-<a href="#sobre" class="btn-principal">Conhecer o Projeto</a>
-<a href="escuta.html" class="btn-secundario">Portal de Escuta</a>
-</div>
 
-</div>
+            <!-- MENU -->
 
-</div>
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Abrir menu"
+                aria-expanded="false">
 
-</section>
+                <i class="fa-solid fa-bars"></i>
 
-</header>
+            </button>
 
-<main>
-<section class="impacto">
 
-<div class="container">
+            <ul
+                class="menu"
+                id="nav-menu">
 
-<div class="titulo-secao">
-<span>NOSSO COMPROMISSO</span>
-<h2>Juntos fazemos a diferença</h2>
-</div>
+                <li>
+                    <a href="#inicio">
+                        Início
+                    </a>
+                </li>
 
-<div class="impacto-grid">
+                <li>
+                    <a href="#sobre">
+                        O que é?
+                    </a>
+                </li>
 
-<div class="card">
-<i class="fa-solid fa-handshake"></i>
-<h3>Empatia</h3>
-<p>Colocar-se no lugar do outro é o primeiro passo para combater o bullying.</p>
-</div>
+                <li>
+                    <a href="#tipos">
+                        Tipos
+                    </a>
+                </li>
 
-<div class="card">
-<i class="fa-solid fa-heart"></i>
-<h3>Respeito</h3>
-<p>Todas as pessoas merecem ser tratadas com dignidade e gentileza.</p>
-</div>
+                <li>
+                    <a href="#ajuda">
+                        Como ajudar
+                    </a>
+                </li>
 
-<div class="card">
-<i class="fa-solid fa-school"></i>
-<h3>Escola Segura</h3>
-<p>Um ambiente acolhedor permite que todos aprendam e convivam melhor.</p>
-</div>
+                <li>
+                    <a href="#apoio">
+                        Canais de Apoio
+                    </a>
+                </li>
 
-<div class="card">
-<i class="fa-solid fa-comments"></i>
-<h3>Sua Voz Importa</h3>
-<p>Falar sobre o que está acontecendo é um ato de coragem e pode transformar vidas.</p>
-</div>
+                <li>
+                    <a href="escuta.html">
+                        Portal de Escuta
+                    </a>
+                </li>
 
-</div>
+                <li>
+                    <a href="quiz.html">
+                        Quiz
+                    </a>
+                </li>
 
-</div>
+                <li>
+                    <a href="referencias.html">
+                        Referências
+                    </a>
+                </li>
 
-</section>
+            </ul>
 
-<section id="sobre" class="sobre">
 
-<div class="titulo-secao">
-<span>CONHECIMENTO</span>
-<h2>O que é o bullying?</h2>
-</div>
+            <!-- MODO ESCURO -->
 
-<div class="texto-sobre">
+            <button
+                id="darkModeBtn"
+                class="dark-mode-btn"
+                aria-label="Ativar modo escuro"
+                title="Modo escuro">
 
-<p>
-O bullying é um comportamento agressivo, intencional e repetitivo praticado para humilhar, intimidar ou excluir outra pessoa.
-</p>
+                <i class="fa-solid fa-moon"></i>
 
-<p>
-Ele pode acontecer na escola, nas redes sociais, em grupos de amigos e em qualquer ambiente de convivência, causando impactos emocionais, psicológicos e até físicos.
-</p>
+            </button>
 
-<p>
-Combater o bullying significa construir um ambiente baseado no respeito, na empatia e na valorização das diferenças.
-</p>
+        </nav>
 
-</div>
 
-<div class="cards">
 
-<div class="card">
-<i class="fa-solid fa-face-sad-tear"></i>
-<h3>Sofrimento emocional</h3>
-<p>Palavras e atitudes podem deixar marcas profundas na autoestima e na saúde emocional.</p>
-</div>
+        <!-- =================================================
+             HERO
+             ================================================= -->
 
-<div class="card">
-<i class="fa-solid fa-users-slash"></i>
-<h3>Exclusão social</h3>
-<p>Ignorar, isolar ou impedir alguém de participar também é uma forma de bullying.</p>
-</div>
+        <section
+            id="inicio"
+            class="hero">
 
-<div class="card">
-<i class="fa-solid fa-hand-fist"></i>
-<h3>Agressão física</h3>
-<p>Empurrões, ameaças e agressões nunca devem ser vistos como brincadeiras.</p>
-</div>
 
-</div>
+            <div class="hero-content">
 
-</section>
-<section id="tipos" class="tipos">
 
-<div class="titulo-secao">
-<span>INFORMAÇÃO</span>
-<h2>Principais tipos de bullying</h2>
-</div>
+                <div class="hero-text">
 
-<div class="cards">
 
-<div class="card">
-<i class="fa-solid fa-comments"></i>
-<h3>Bullying verbal</h3>
-<p>Apelidos ofensivos, insultos, piadas cruéis e palavras usadas para humilhar outra pessoa.</p>
-</div>
+                    <span class="tag">
 
-<div class="card">
-<i class="fa-solid fa-hand"></i>
-<h3>Bullying físico</h3>
-<p>Empurrões, chutes, socos e qualquer forma de agressão corporal.</p>
-</div>
+                        <i class="fa-solid fa-heart"></i>
 
-<div class="card">
-<i class="fa-solid fa-user-group"></i>
-<h3>Bullying social</h3>
-<p>Exclusão proposital, espalhar boatos ou incentivar outras pessoas a afastarem alguém.</p>
-</div>
+                        Projeto Escolar de Conscientização
 
-<div class="card">
-<i class="fa-solid fa-mobile-screen"></i>
-<h3>Cyberbullying</h3>
-<p>Acontece pela internet, redes sociais ou aplicativos, por meio de mensagens, fotos, vídeos ou comentários ofensivos.</p>
-</div>
+                    </span>
 
-</div>
 
-</section>
+                    <h1>
 
-<section class="curiosidades">
+                        Sua voz pode
+                        <span>transformar vidas.</span>
 
-<div class="titulo-secao">
-<span>REFLEXÃO</span>
-<h2>Por que devemos combater o bullying?</h2>
-</div>
+                    </h1>
 
-<div class="cards">
 
-<div class="card">
-<i class="fa-solid fa-handshake"></i>
-<h3>Respeito</h3>
-<p>Toda pessoa merece ser tratada com dignidade, independentemente de sua aparência, personalidade ou origem.</p>
-</div>
+                    <h2>
 
-<div class="card">
-<i class="fa-solid fa-heart"></i>
-<h3>Empatia</h3>
-<p>Colocar-se no lugar do outro ajuda a construir amizades e um ambiente mais acolhedor.</p>
-</div>
+                        Juntos podemos construir uma escola
+                        com mais respeito, empatia e inclusão.
 
-<div class="card">
-<i class="fa-solid fa-school"></i>
-<h3>Escola melhor</h3>
-<p>Uma escola baseada no respeito permite que todos aprendam com mais segurança, confiança e tranquilidade.</p>
-</div>
+                    </h2>
 
-</div>
 
-</section>
+                    <p>
 
-<section id="ajuda" class="ajuda">
+                        O <strong>Voz Contra o Bullying</strong> é um
+                        projeto criado para informar, conscientizar
+                        e incentivar atitudes que contribuam para
+                        uma convivência mais respeitosa e acolhedora.
 
-<div class="titulo-secao">
-<span>ATITUDE</span>
-<h2>Como ajudar uma vítima?</h2>
-</div>
+                    </p>
 
-<div class="cards">
 
-<div class="card">
-<i class="fa-solid fa-ear-listen"></i>
-<h3>Escute</h3>
-<p>Ouça com atenção, acolha sem julgamentos e demonstre que ela não está sozinha.</p>
-</div>
+                    <p>
 
-<div class="card">
-<i class="fa-solid fa-hand-holding-heart"></i>
-<h3>Apoie</h3>
-<p>Incentive a vítima a conversar com familiares, professores ou pessoas de confiança.</p>
-</div>
+                        Porque ninguém deve ter medo de ser quem é
+                        ou de frequentar um ambiente onde deveria
+                        se sentir seguro.
 
-<div class="card">
-<i class="fa-solid fa-school"></i>
-<h3>Procure ajuda</h3>
-<p>A escola deve ser comunicada para oferecer proteção e tomar as medidas necessárias.</p>
-</div>
+                    </p>
 
-<div class="card">
-<i class="fa-solid fa-ban"></i>
-<h3>Não incentive</h3>
-<p>Nunca participe ou compartilhe brincadeiras, mensagens, fotos ou vídeos que humilhem outra pessoa.</p>
-</div>
 
-</div>
+                    <!-- BOTÕES -->
 
-</section>
-<section id="apoio" class="apoio">
+                    <div class="hero-buttons">
 
-<div class="titulo-secao">
-<span>BUSQUE AJUDA</span>
-<h2>Canais de Apoio</h2>
-</div>
+                        <a
+                            href="#sobre"
+                            class="btn-principal">
 
-<div class="apoio-card">
+                            <i class="fa-solid fa-arrow-down"></i>
 
-<h3>Você não está sozinho 💜</h3>
+                            Conhecer o projeto
 
-<p>Se você está sofrendo bullying ou conhece alguém que esteja, procure ajuda. Conversar com uma pessoa de confiança pode fazer toda a diferença.</p>
+                        </a>
 
-<ul>
-<li><i class="fa-solid fa-school"></i><strong> Escola:</strong> Procure professores, pedagogos, direção ou outro funcionário de confiança.</li>
-<li><i class="fa-solid fa-house"></i><strong> Família:</strong> Converse com seus pais, responsáveis ou outro adulto de confiança.</li>
-<li><i class="fa-solid fa-phone"></i><strong> Disque 100:</strong> Canal gratuito para denúncias de violações dos direitos humanos.</li>
-<li><i class="fa-solid fa-shield"></i><strong> Emergências:</strong> Em situações de risco imediato, ligue para a Polícia Militar pelo número <strong>190</strong>.</li>
-<li><i class="fa-solid fa-location-dot"></i><strong> Guarapuava:</strong> Procure a equipe pedagógica da escola ou os serviços de assistência do município.</li>
-</ul>
 
-</div>
+                        <a
+                            href="escuta.html"
+                            class="btn-secundario">
 
-</section>
+                            <i class="fa-solid fa-comments"></i>
 
-<section class="frase">
+                            Portal de Escuta
 
-<div class="container">
+                        </a>
 
-<h2>"O respeito é a voz mais forte contra o bullying."</h2>
+                    </div>
 
-<p class="texto-frase">
-Pequenas atitudes de gentileza, empatia e acolhimento podem transformar vidas. Escolha sempre ser a diferença.
-</p>
+                </div>
 
-</div>
 
-</section>
 
-<section class="cta">
+                <!-- ILUSTRAÇÃO DO HERO -->
 
-<div class="container">
+                <div
+                    class="hero-decoration"
+                    aria-hidden="true">
 
-<h2>Precisa conversar?</h2>
+                    <div class="hero-circle">
 
-<p>
-Se você está passando por uma situação de bullying ou conhece alguém que esteja, saiba que pedir ajuda é um ato de coragem. Nosso Portal de Escuta foi criado para acolher você.
-</p>
+                        <i class="fa-solid fa-shield-heart"></i>
 
-<a href="escuta.html" class="btn-principal">
-Acessar Portal de Escuta
-</a>
+                    </div>
 
-</div>
 
-</section>
+                    <span class="floating-heart heart-one">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
 
-</main>
 
-<footer>
+                    <span class="floating-heart heart-two">
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
 
-<div class="footer-container">
 
-<div class="footer-logo">
+                    <span class="floating-message">
+                        <i class="fa-solid fa-comment"></i>
+                    </span>
 
-<h2><i class="fa-solid fa-shield-heart"></i> Voz Contra o Bullying</h2>
+                </div>
 
-<p>
-Projeto escolar dedicado à conscientização, ao respeito e ao combate ao bullying, incentivando uma convivência mais segura e acolhedora.
-</p>
+            </div>
 
-</div>
+        </section>
 
-<div class="footer-links">
+    </header>
 
-<h3>Navegação</h3>
 
-<ul>
-<li><a href="#inicio">Início</a></li>
-<li><a href="#sobre">O que é?</a></li>
-<li><a href="#tipos">Tipos</a></li>
-<li><a href="#ajuda">Como ajudar</a></li>
-<li><a href="#apoio">Canais de Apoio</a></li>
-<li><a href="quiz.html">Quiz</a></li>
-<li><a href="referencias.html">Referências</a></li>
-</ul>
 
-</div>
+    <!-- =================================================
+         CONTEÚDO PRINCIPAL
+         ================================================= -->
 
-<div class="footer-contato">
+    <main>
 
-<h3>Mensagem</h3>
 
-<p>
-💜 Respeito gera respeito.<br>
-Sua voz importa e ninguém deve enfrentar o bullying sozinho.
-</p>
+        <!-- =================================================
+             IMPACTO
+             ================================================= -->
 
-</div>
+        <section
+            class="impacto"
+            aria-labelledby="titulo-impacto">
 
-</div>
 
-<div class="footer-bottom">
+            <div class="container">
 
-<p>© 2026 • Voz Contra o Bullying • Projeto Escolar de Conscientização</p>
 
-</div>
+                <div class="titulo-secao">
 
-</footer>
+                    <span>
+                        NOSSO COMPROMISSO
+                    </span>
 
-<button id="topoBtn">
-<i class="fa-solid fa-arrow-up"></i>
-</button>
+                    <h2 id="titulo-impacto">
 
-<script src="script.js"></script>
+                        Juntos fazemos
+                        <span>a diferença</span>
+
+                    </h2>
+
+                    <p>
+
+                        Combater o bullying começa com pequenas
+                        atitudes que demonstram respeito e cuidado
+                        com as pessoas ao nosso redor.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="impacto-grid">
+
+
+                    <!-- EMPATIA -->
+
+                    <article class="card">
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+
+                        </div>
+
+                        <h3>
+                            Empatia
+                        </h3>
+
+                        <p>
+
+                            Tentar compreender os sentimentos do outro
+                            ajuda a criar relações mais saudáveis e
+                            acolhedoras.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- RESPEITO -->
+
+                    <article class="card">
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-heart"></i>
+
+                        </div>
+
+                        <h3>
+                            Respeito
+                        </h3>
+
+                        <p>
+
+                            Cada pessoa possui sua própria história,
+                            personalidade e características. Respeitar
+                            as diferenças é essencial.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- ESCOLA SEGURA -->
+
+                    <article class="card">
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-school"></i>
+
+                        </div>
+
+                        <h3>
+                            Escola segura
+                        </h3>
+
+                        <p>
+
+                            Todos devem poder estudar em um ambiente
+                            onde se sintam protegidos, respeitados
+                            e acolhidos.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- VOZ -->
+
+                    <article class="card">
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-bullhorn"></i>
+
+                        </div>
+
+                        <h3>
+                            Sua voz importa
+                        </h3>
+
+                        <p>
+
+                            Falar sobre uma situação de bullying
+                            pode ser o primeiro passo para buscar
+                            ajuda e mudar uma situação.
+
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- =================================================
+             O QUE É BULLYING?
+             ================================================= -->
+
+        <section
+            id="sobre"
+            class="sobre"
+            aria-labelledby="titulo-sobre">
+
+
+            <div class="container">
+
+
+                <div class="titulo-secao">
+
+                    <span>
+                        CONHECIMENTO
+                    </span>
+
+                    <h2 id="titulo-sobre">
+
+                        O que é
+                        <span>bullying?</span>
+
+                    </h2>
+
+                </div>
+
+
+
+                <div class="sobre-grid">
+
+
+                    <!-- TEXTO -->
+
+                    <div class="texto-sobre">
+
+                        <p>
+
+                            O bullying é uma forma de violência
+                            caracterizada por comportamentos
+                            agressivos, intencionais e repetitivos
+                            que podem causar sofrimento, medo ou
+                            constrangimento em outra pessoa.
+
+                        </p>
+
+
+                        <p>
+
+                            Ele pode acontecer de diferentes maneiras:
+                            por meio de palavras, agressões físicas,
+                            exclusão social ou até mesmo através
+                            da internet e das redes sociais.
+
+                        </p>
+
+
+                        <p>
+
+                            É importante lembrar que bullying não é
+                            apenas uma "brincadeira". Quando uma
+                            atitude machuca, humilha ou intimida
+                            alguém, ela precisa ser levada a sério.
+
+                        </p>
+
+
+                        <div class="sobre-alerta">
+
+                            <i class="fa-solid fa-circle-exclamation"></i>
+
+                            <div>
+
+                                <strong>
+                                    Bullying não é brincadeira.
+                                </strong>
+
+                                <p>
+
+                                    Toda pessoa merece ser tratada
+                                    com respeito e dignidade.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CARDS -->
+
+                    <div class="sobre-cards">
+
+
+                        <article class="card">
+
+                            <div class="card-icon">
+
+                                <i class="fa-solid fa-repeat"></i>
+
+                            </div>
+
+                            <h3>
+                                Repetição
+                            </h3>
+
+                            <p>
+
+                                As agressões ou comportamentos
+                                acontecem de forma repetida
+                                ou fazem parte de um padrão.
+
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="card">
+
+                            <div class="card-icon">
+
+                                <i class="fa-solid fa-bullseye"></i>
+
+                            </div>
+
+                            <h3>
+                                Intenção de machucar
+                            </h3>
+
+                            <p>
+
+                                O comportamento busca intimidar,
+                                humilhar, excluir ou causar
+                                sofrimento.
+
+                            </p>
+
+                        </article>
+
+
+
+                        <article class="card">
+
+                            <div class="card-icon">
+
+                                <i class="fa-solid fa-people-arrows"></i>
+
+                            </div>
+
+                            <h3>
+                                Desequilíbrio de poder
+                            </h3>
+
+                            <p>
+
+                                Pode existir uma diferença de
+                                força, influência ou posição
+                                entre as pessoas envolvidas.
+
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TIPOS DE BULLYING
+             ================================================= -->
+
+        <section
+            id="tipos"
+            class="tipos"
+            aria-labelledby="titulo-tipos">
+
+
+            <div class="container">
+
+
+                <div class="titulo-secao">
+
+                    <span>
+                        INFORMAÇÃO
+                    </span>
+
+                    <h2 id="titulo-tipos">
+
+                        Conheça os principais
+                        <span>tipos de bullying</span>
+
+                    </h2>
+
+                    <p>
+
+                        O bullying pode aparecer de diferentes
+                        formas. Reconhecê-las é importante para
+                        saber quando procurar ajuda.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="cards tipos-grid">
+
+
+                    <!-- VERBAL -->
+
+                    <article class="card tipo-card">
+
+                        <div class="tipo-numero">
+                            01
+                        </div>
+
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Bullying verbal
+                        </h3>
+
+
+                        <p>
+
+                            Envolve insultos, apelidos ofensivos,
+                            provocações, ameaças ou comentários
+                            usados para humilhar outra pessoa.
+
+                        </p>
+
+
+                        <span class="tipo-exemplo">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Palavras também podem machucar.
+
+                        </span>
+
+                    </article>
+
+
+
+                    <!-- FÍSICO -->
+
+                    <article class="card tipo-card">
+
+                        <div class="tipo-numero">
+                            02
+                        </div>
+
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-hand-fist"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Bullying físico
+                        </h3>
+
+
+                        <p>
+
+                            Acontece por meio de agressões ou
+                            comportamentos físicos que machucam,
+                            intimidam ou ameaçam alguém.
+
+                        </p>
+
+
+                        <span class="tipo-exemplo">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Agressão nunca é brincadeira.
+
+                        </span>
+
+                    </article>
+
+
+
+                    <!-- SOCIAL -->
+
+                    <article class="card tipo-card">
+
+                        <div class="tipo-numero">
+                            03
+                        </div>
+
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-user-group"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Bullying social
+                        </h3>
+
+
+                        <p>
+
+                            Pode envolver exclusão proposital,
+                            espalhar rumores ou incentivar outras
+                            pessoas a isolarem alguém.
+
+                        </p>
+
+
+                        <span class="tipo-exemplo">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            Ninguém deve ser excluído de propósito.
+
+                        </span>
+
+                    </article>
+
+
+
+                    <!-- CYBERBULLYING -->
+
+                    <article class="card tipo-card">
+
+                        <div class="tipo-numero">
+                            04
+                        </div>
+
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Cyberbullying
+                        </h3>
+
+
+                        <p>
+
+                            Acontece por meio da internet, redes
+                            sociais, jogos ou aplicativos, através
+                            de mensagens, imagens ou publicações
+                            ofensivas.
+
+                        </p>
+
+
+                        <span class="tipo-exemplo">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                            A internet também deve ser um espaço
+                            de respeito.
+
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             COMO RECONHECER
+             ================================================= -->
+
+        <section
+            class="sinais"
+            aria-labelledby="titulo-sinais">
+
+
+            <div class="container">
+
+
+                <div class="titulo-secao">
+
+                    <span>
+                        ATENÇÃO
+                    </span>
+
+                    <h2 id="titulo-sinais">
+
+                        Como perceber que
+                        <span>algo não está bem?</span>
+
+                    </h2>
+
+                    <p>
+
+                        Algumas mudanças de comportamento podem
+                        indicar que uma pessoa está passando por
+                        uma situação difícil.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="sinais-grid">
+
+
+                    <article class="sinal">
+
+                        <i class="fa-solid fa-user-minus"></i>
+
+                        <div>
+
+                            <h3>
+                                Isolamento
+                            </h3>
+
+                            <p>
+
+                                A pessoa começa a evitar colegas,
+                                lugares ou atividades que antes
+                                costumava frequentar.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="sinal">
+
+                        <i class="fa-solid fa-face-frown"></i>
+
+                        <div>
+
+                            <h3>
+                                Mudanças emocionais
+                            </h3>
+
+                            <p>
+
+                                Pode demonstrar tristeza,
+                                irritação, preocupação ou
+                                insegurança com mais frequência.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="sinal">
+
+                        <i class="fa-solid fa-school"></i>
+
+                        <div>
+
+                            <h3>
+                                Dificuldades na escola
+                            </h3>
+
+                            <p>
+
+                                Mudanças na vontade de ir à escola
+                                ou na participação nas atividades
+                                podem ser um sinal de que algo
+                                precisa de atenção.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="sinal">
+
+                        <i class="fa-solid fa-comments"></i>
+
+                        <div>
+
+                            <h3>
+                                Medo de contar
+                            </h3>
+
+                            <p>
+
+                                Algumas pessoas podem ter dificuldade
+                                para falar sobre o que estão vivendo
+                                por medo ou vergonha.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REFLEXÃO
+             ================================================= -->
+
+        <section class="reflexao">
+
+            <div class="container">
+
+                <div class="reflexao-content">
+
+                    <span class="tag">
+                        PARA PENSAR
+                    </span>
+
+
+                    <h2>
+
+                        Antes de falar ou agir,
+                        pense no impacto que suas atitudes
+                        podem causar.
+
+                    </h2>
+
+
+                    <p>
+
+                        Uma palavra pode parecer pequena para quem
+                        diz, mas pode significar muito para quem
+                        escuta. Escolher o respeito também é uma
+                        forma de cuidar.
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="reflexao-icon"
+                    aria-hidden="true">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- =================================================
+             COMO AJUDAR
+             ================================================= -->
+
+        <section
+            id="ajuda"
+            class="ajuda"
+            aria-labelledby="titulo-ajuda">
+
+
+            <div class="container">
+
+
+                <div class="titulo-secao">
+
+                    <span>
+                        ATITUDE
+                    </span>
+
+                    <h2 id="titulo-ajuda">
+
+                        O que podemos fazer
+                        <span>para ajudar?</span>
+
+                    </h2>
+
+                    <p>
+
+                        Combater o bullying é uma responsabilidade
+                        coletiva. Todos podem contribuir para uma
+                        convivência mais respeitosa.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="ajuda-grid">
+
+
+                    <article class="ajuda-card">
+
+                        <span class="ajuda-numero">
+                            01
+                        </span>
+
+                        <i class="fa-solid fa-ear-listen"></i>
+
+                        <h3>
+                            Escute
+                        </h3>
+
+                        <p>
+
+                            Se alguém contar que está passando por
+                            uma situação de bullying, escute com
+                            atenção e sem julgamentos.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="ajuda-card">
+
+                        <span class="ajuda-numero">
+                            02
+                        </span>
+
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+
+                        <h3>
+                            Acolha
+                        </h3>
+
+                        <p>
+
+                            Demonstre que a pessoa não está sozinha
+                            e que seus sentimentos merecem ser
+                            levados a sério.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="ajuda-card">
+
+                        <span class="ajuda-numero">
+                            03
+                        </span>
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                        <h3>
+                            Procure ajuda
+                        </h3>
+
+                        <p>
+
+                            Converse com um adulto de confiança,
+                            professor, pedagogo ou responsável
+                            quando uma situação de bullying acontecer.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="ajuda-card">
+
+                        <span class="ajuda-numero">
+                            04
+                        </span>
+
+                        <i class="fa-solid fa-ban"></i>
+
+                        <h3>
+                            Não participe
+                        </h3>
+
+                        <p>
+
+                            Não incentive, compartilhe ou apoie
+                            atitudes que humilhem, excluam ou
+                            machuquem outra pessoa.
+
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SE VOCÊ ESTÁ PASSANDO POR BULLYING
+             ================================================= -->
+
+        <section
+            class="acolhimento"
+            aria-labelledby="titulo-acolhimento">
+
+
+            <div class="container">
+
+
+                <div class="acolhimento-icon">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                </div>
+
+
+                <div class="acolhimento-text">
+
+                    <span>
+                        VOCÊ NÃO ESTÁ SOZINHO
+                    </span>
+
+
+                    <h2 id="titulo-acolhimento">
+
+                        Se você está passando por bullying,
+                        <strong>procure ajuda.</strong>
+
+                    </h2>
+
+
+                    <p>
+
+                        Contar para alguém de confiança pode ser
+                        difícil, mas você não precisa enfrentar
+                        essa situação sozinho. Um adulto, professor,
+                        familiar ou profissional da escola pode
+                        ajudar a encontrar uma solução segura.
+
+                    </p>
+
+
+                    <a
+                        href="escuta.html"
+                        class="btn-principal">
+
+                        <i class="fa-solid fa-comments"></i>
+
+                        Quero conversar
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CANAIS DE APOIO
+             ================================================= -->
+
+        <section
+            id="apoio"
+            class="apoio"
+            aria-labelledby="titulo-apoio">
+
+
+            <div class="container">
+
+
+                <div class="titulo-secao">
+
+                    <span>
+                        BUSQUE AJUDA
+                    </span>
+
+                    <h2 id="titulo-apoio">
+
+                        Canais de
+                        <span>apoio</span>
+
+                    </h2>
+
+                    <p>
+
+                        Se você ou alguém que conhece está passando
+                        por uma situação de violência ou bullying,
+                        procure uma pessoa de confiança e utilize
+                        os canais adequados.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="apoio-grid">
+
+
+                    <!-- ESCOLA -->
+
+                    <article class="apoio-card">
+
+                        <div class="apoio-icon">
+
+                            <i class="fa-solid fa-school"></i>
+
+                        </div>
+
+                        <h3>
+                            Na escola
+                        </h3>
+
+                        <p>
+
+                            Procure professores, pedagogos,
+                            coordenação, direção ou outro funcionário
+                            em quem você confie.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- FAMÍLIA -->
+
+                    <article class="apoio-card">
+
+                        <div class="apoio-icon">
+
+                            <i class="fa-solid fa-house"></i>
+
+                        </div>
+
+                        <h3>
+                            Família ou responsável
+                        </h3>
+
+                        <p>
+
+                            Converse com seus responsáveis ou com
+                            outro adulto de confiança que possa
+                            ajudar você.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- DISQUE 100 -->
+
+                    <article class="apoio-card">
+
+                        <div class="apoio-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+                        <h3>
+                            Disque 100
+                        </h3>
+
+                        <p>
+
+                            Canal destinado a receber denúncias
+                            relacionadas a violações de direitos
+                            humanos.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- EMERGÊNCIA -->
+
+                    <article class="apoio-card">
+
+                        <div class="apoio-icon">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+                        <h3>
+                            Situação de emergência
+                        </h3>
+
+                        <p>
+
+                            Em uma situação de risco imediato,
+                            procure um adulto e acione o serviço
+                            de emergência adequado.
+
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- AVISO -->
+
+                <div class="apoio-aviso">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <p>
+
+                        <strong>Importante:</strong>
+                        este site tem finalidade educativa.
+                        O Portal de Escuta não substitui o apoio
+                        de familiares, da escola ou de profissionais
+                        especializados.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PORTAL DE ESCUTA
+             ================================================= -->
+
+        <section class="cta">
+
+            <div class="container">
+
+
+                <div class="cta-content">
+
+                    <span class="tag">
+                        ESPAÇO DE ACOLHIMENTO
+                    </span>
+
+
+                    <h2>
+                        Precisa conversar?
+                    </h2>
+
+
+                    <p>
+
+                        Criamos um espaço para você poder expressar
+                        o que está sentindo e encontrar informações
+                        sobre como buscar apoio.
+
+                    </p>
+
+
+                    <a
+                        href="escuta.html"
+                        class="btn-principal">
+
+                        Acessar Portal de Escuta
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="cta-icon"
+                    aria-hidden="true">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUIZ
+             ================================================= -->
+
+        <section class="quiz-preview">
+
+            <div class="container">
+
+
+                <div class="quiz-preview-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        TESTE SEUS CONHECIMENTOS
+                    </span>
+
+
+                    <h2>
+                        Você sabe reconhecer o bullying?
+                    </h2>
+
+
+                    <p>
+
+                        Faça nosso quiz e descubra o quanto você
+                        aprendeu sobre bullying, respeito e
+                        convivência.
+
+                    </p>
+
+
+                    <a
+                        href="quiz.html"
+                        class="btn-principal">
+
+                        Fazer o Quiz
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FRASE FINAL
+             ================================================= -->
+
+        <section class="frase">
+
+            <div class="container">
+
+
+                <div class="frase-icon">
+
+                    <i class="fa-solid fa-quote-left"></i>
+
+                </div>
+
+
+                <h2>
+
+                    "O respeito é uma das vozes mais fortes
+                    contra o bullying."
+
+                </h2>
+
+
+                <p>
+
+                    Pequenas atitudes de gentileza, empatia e
+                    acolhimento podem fazer uma grande diferença.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =================================================
+         RODAPÉ
+         ================================================= -->
+
+    <footer>
+
+
+        <div class="footer-container">
+
+
+            <!-- SOBRE -->
+
+            <div class="footer-logo">
+
+                <h2>
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    Voz Contra o Bullying
+
+                </h2>
+
+
+                <p>
+
+                    Projeto escolar dedicado à conscientização,
+                    ao respeito e à construção de ambientes mais
+                    seguros e acolhedores.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- NAVEGAÇÃO -->
+
+            <div class="footer-links">
+
+                <h3>
+                    Navegação
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        <a href="#inicio">
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#sobre">
+                            O que é?
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#tipos">
+                            Tipos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#ajuda">
+                            Como ajudar
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#apoio">
+                            Canais de Apoio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="escuta.html">
+                            Portal de Escuta
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="quiz.html">
+                            Quiz
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="referencias.html">
+                            Referências
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- MENSAGEM -->
+
+            <div class="footer-contato">
+
+                <h3>
+                    Uma mensagem para você
+                </h3>
+
+
+                <p>
+
+                    💜 Você merece ser tratado com respeito.
+
+                </p>
+
+
+                <p>
+
+                    Sua voz importa. Pedir ajuda é uma atitude
+                    de coragem.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RODAPÉ INFERIOR -->
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 • Voz Contra o Bullying
+                • Projeto Escolar de Conscientização
+
+            </p>
+
+
+            <a
+                href="#inicio"
+                class="back-to-top"
+                aria-label="Voltar ao início">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </a>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =================================================
+         BOTÃO VOLTAR AO TOPO
+         ================================================= -->
+
+    <button
+        id="topoBtn"
+        aria-label="Voltar ao topo"
+        title="Voltar ao topo">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script src="script.js"></script>
+
 
 </body>
+
 </html>
