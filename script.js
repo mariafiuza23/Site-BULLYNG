@@ -1,56 +1,36 @@
-/* =========================
+/* =========================================================
    VOZ CONTRA O BULLYING
-   SCRIPT PRINCIPAL
-========================= */
+   SCRIPT.JS
+   ========================================================= */
 
 
-/* =========================
+/* =========================================================
    MODO ESCURO
-========================= */
+   ========================================================= */
 
 const darkModeBtn = document.getElementById("darkModeBtn");
 
 if (darkModeBtn) {
 
-    const icone = darkModeBtn.querySelector("i");
-
-    // Recupera preferência salva
-    if (localStorage.getItem("modoEscuro") === "ativo") {
-
-        document.body.classList.add("dark-mode");
-
-        if (icone) {
-            icone.classList.remove("fa-moon");
-            icone.classList.add("fa-sun");
-        }
-
-    }
-
     darkModeBtn.addEventListener("click", () => {
 
         document.body.classList.toggle("dark-mode");
 
-        const modoAtivo =
-            document.body.classList.contains("dark-mode");
+        const icon = darkModeBtn.querySelector("i");
 
-        localStorage.setItem(
-            "modoEscuro",
-            modoAtivo ? "ativo" : "inativo"
-        );
+        if (document.body.classList.contains("dark-mode")) {
 
-        if (icone) {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
 
-            if (modoAtivo) {
+            localStorage.setItem("modoEscuro", "ativado");
 
-                icone.classList.remove("fa-moon");
-                icone.classList.add("fa-sun");
+        } else {
 
-            } else {
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
 
-                icone.classList.remove("fa-sun");
-                icone.classList.add("fa-moon");
-
-            }
+            localStorage.setItem("modoEscuro", "desativado");
 
         }
 
@@ -59,9 +39,121 @@ if (darkModeBtn) {
 }
 
 
-/* =========================
+/* =========================================================
+   MANTER O MODO ESCURO SALVO
+   ========================================================= */
+
+const modoSalvo = localStorage.getItem("modoEscuro");
+
+if (modoSalvo === "ativado") {
+
+    document.body.classList.add("dark-mode");
+
+    if (darkModeBtn) {
+
+        const icon = darkModeBtn.querySelector("i");
+
+        if (icon) {
+
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   MENU MOBILE
+   ========================================================= */
+
+/*
+   O HTML atual não possui um botão específico
+   para abrir o menu no celular.
+
+   Por isso, criamos um automaticamente.
+*/
+
+const navbar = document.querySelector(".navbar");
+const menu = document.querySelector(".menu");
+
+if (navbar && menu) {
+
+    const menuToggle = document.createElement("button");
+
+    menuToggle.className = "menu-toggle";
+
+    menuToggle.setAttribute(
+        "aria-label",
+        "Abrir menu"
+    );
+
+    menuToggle.innerHTML =
+        '<i class="fa-solid fa-bars"></i>';
+
+    navbar.appendChild(menuToggle);
+
+
+    menuToggle.addEventListener("click", () => {
+
+        menu.classList.toggle("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        if (menu.classList.contains("active")) {
+
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Fechar menu"
+            );
+
+        } else {
+
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Abrir menu"
+            );
+
+        }
+
+    });
+
+
+    /* ---------------------------------------------
+       FECHAR MENU AO CLICAR EM UM LINK
+       --------------------------------------------- */
+
+    const linksMenu = menu.querySelectorAll("a");
+
+    linksMenu.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            menu.classList.remove("active");
+
+            const icon = menuToggle.querySelector("i");
+
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+
+        });
+
+    });
+
+}
+
+
+/* =========================================================
    BOTÃO VOLTAR AO TOPO
-========================= */
+   ========================================================= */
 
 const topoBtn = document.getElementById("topoBtn");
 
@@ -69,13 +161,13 @@ if (topoBtn) {
 
     window.addEventListener("scroll", () => {
 
-        if (window.scrollY > 300) {
+        if (window.scrollY > 400) {
 
-            topoBtn.classList.add("mostrar");
+            topoBtn.classList.add("show");
 
         } else {
 
-            topoBtn.classList.remove("mostrar");
+            topoBtn.classList.remove("show");
 
         }
 
@@ -85,8 +177,11 @@ if (topoBtn) {
     topoBtn.addEventListener("click", () => {
 
         window.scrollTo({
+
             top: 0,
+
             behavior: "smooth"
+
         });
 
     });
@@ -94,587 +189,178 @@ if (topoBtn) {
 }
 
 
-/* =========================
-   AUMENTAR / DIMINUIR FONTE
-========================= */
+/* =========================================================
+   ANIMAÇÃO DAS SEÇÕES
+   ========================================================= */
 
-const aumentarFonte =
-    document.getElementById("aumentarFonte");
-
-const diminuirFonte =
-    document.getElementById("diminuirFonte");
-
-const resetarFonte =
-    document.getElementById("resetarFonte");
-
-let tamanhoFonte = 100;
+const elementosAnimados = document.querySelectorAll(
+    ".card, .sinal, .tipo-card, .ajuda-card, .apoio-card"
+);
 
 
-function aplicarFonte() {
+const observador = new IntersectionObserver(
 
-    document.documentElement.style.fontSize =
-        tamanhoFonte + "%";
+    (elementos) => {
 
-}
-
-
-if (aumentarFonte) {
-
-    aumentarFonte.addEventListener("click", () => {
-
-        if (tamanhoFonte < 125) {
-
-            tamanhoFonte += 5;
-            aplicarFonte();
-
-        }
-
-    });
-
-}
-
-
-if (diminuirFonte) {
-
-    diminuirFonte.addEventListener("click", () => {
-
-        if (tamanhoFonte > 90) {
-
-            tamanhoFonte -= 5;
-            aplicarFonte();
-
-        }
-
-    });
-
-}
-
-
-if (resetarFonte) {
-
-    resetarFonte.addEventListener("click", () => {
-
-        tamanhoFonte = 100;
-        aplicarFonte();
-
-    });
-
-}
-
-
-/* =========================
-   PORTAL DE ESCUTA
-========================= */
-
-const desabafo =
-    document.getElementById("desabafo");
-
-const enviarDesabafo =
-    document.getElementById("enviarDesabafo");
-
-const mensagemEscuta =
-    document.getElementById("mensagemEscuta");
-
-
-if (
-    desabafo &&
-    enviarDesabafo &&
-    mensagemEscuta
-) {
-
-    enviarDesabafo.addEventListener("click", () => {
-
-        if (desabafo.value.trim() === "") {
-
-            mensagemEscuta.innerHTML = `
-                <i class="fa-solid fa-circle-exclamation"></i>
-
-                <div>
-                    <strong>Você pode escrever.</strong>
-
-                    <p>
-                        Coloque seus sentimentos em palavras,
-                        do seu jeito e no seu tempo.
-                    </p>
-                </div>
-            `;
-
-            mensagemEscuta.className =
-                "mensagem-escuta mostrar aviso";
-
-            return;
-
-        }
-
-
-        mensagemEscuta.innerHTML = `
-            <i class="fa-solid fa-heart"></i>
-
-            <div>
-                <strong>Obrigado por compartilhar.</strong>
-
-                <p>
-                    Seus sentimentos são importantes.
-                    Se algo estiver acontecendo com você,
-                    converse também com uma pessoa adulta
-                    de confiança.
-                </p>
-            </div>
-        `;
-
-        mensagemEscuta.className =
-            "mensagem-escuta mostrar sucesso";
-
-        desabafo.value = "";
-
-    });
-
-}
-
-
-/* =========================
-   ANIMAÇÃO AO APARECER
-========================= */
-
-const elementosAnimados =
-    document.querySelectorAll(".card, .referencia-card, .frases-desafio > div");
-
-
-const observador =
-    new IntersectionObserver((elementos) => {
-
-        elementos.forEach((elemento) => {
+        elementos.forEach(elemento => {
 
             if (elemento.isIntersecting) {
 
-                elemento.target.classList.add("aparecer");
+                elemento.target.classList.add(
+                    "aparecer"
+                );
 
-                observador.unobserve(elemento.target);
+                observador.unobserve(
+                    elemento.target
+                );
 
             }
 
         });
 
-    }, {
-        threshold: 0.15
-    });
+    },
+
+    {
+        threshold: 0.12
+    }
+
+);
 
 
-elementosAnimados.forEach((elemento) => {
+elementosAnimados.forEach(elemento => {
+
+    elemento.classList.add("animacao-escondida");
 
     observador.observe(elemento);
 
 });
 
-/* =========================
-   DESAFIO INTERATIVO
-========================= */
 
-const perguntas = [
+/* =========================================================
+   EFEITO DE DIGITAÇÃO NO TÍTULO
+   ========================================================= */
 
-    {
-        pergunta:
-        "Você percebe que um colega está sendo excluído pelos outros. O que você faria?",
+/*
+   Mantemos o efeito simples para não atrapalhar
+   a leitura do site.
+*/
 
-        opcoes: [
+const heroTitle = document.querySelector(
+    ".hero h1"
+);
 
-            [
-                "Ignoraria, pois não é problema meu.",
-                "errada"
-            ],
+if (heroTitle) {
 
-            [
-                "Me aproximaria, ofereceria apoio e procuraria ajuda se necessário.",
-                "certa"
-            ],
-
-            [
-                "Faria uma brincadeira para tentar chamar a atenção.",
-                "errada"
-            ]
-
-        ],
-
-        explicacao:
-        "Apoiar quem está sendo excluído e procurar ajuda de uma pessoa de confiança é uma atitude de empatia e respeito."
-    },
-
-
-    {
-        pergunta:
-        "Um colega conta para você que está sofrendo bullying. Como você reage?",
-
-        opcoes: [
-
-            [
-                "Digo que é melhor esquecer e não falar sobre isso.",
-                "errada"
-            ],
-
-            [
-                "Escuto, acolho e incentivo a pessoa a procurar alguém de confiança.",
-                "certa"
-            ],
-
-            [
-                "Conto para outras pessoas para descobrir o que aconteceu.",
-                "errada"
-            ]
-
-        ],
-
-        explicacao:
-        "Ouvir sem julgamentos e incentivar a busca por ajuda pode fazer a pessoa se sentir acolhida e protegida."
-    },
-
-
-    {
-        pergunta:
-        "Você recebe uma mensagem ofensiva sobre um colega em um grupo. O que faz?",
-
-        opcoes: [
-
-            [
-                "Compartilho com outras pessoas porque achei engraçado.",
-                "errada"
-            ],
-
-            [
-                "Respondo com outra ofensa para defender meu colega.",
-                "errada"
-            ],
-
-            [
-                "Não compartilho a mensagem e procuro ajuda se a situação continuar.",
-                "certa"
-            ]
-
-        ],
-
-        explicacao:
-        "Não espalhar ofensas ajuda a interromper o ciclo de violência. Quando necessário, procure um adulto ou responsável de confiança."
-    }
-
-];
-
-
-const pergunta =
-document.getElementById("pergunta");
-
-const opcoes =
-document.querySelectorAll(".opcao");
-
-const feedback =
-document.getElementById("feedback");
-
-const proximaPergunta =
-document.getElementById("proximaPergunta");
-
-const numeroPergunta =
-document.getElementById("numeroPergunta");
-
-const progresso =
-document.getElementById("progresso");
-
-const perguntaContainer =
-document.getElementById("pergunta-container");
-
-const resultado =
-document.getElementById("resultado");
-
-const pontuacaoTexto =
-document.getElementById("pontuacao");
-
-const mensagemResultado =
-document.getElementById("mensagemResultado");
-
-const reiniciarDesafio =
-document.getElementById("reiniciarDesafio");
-
-
-let perguntaAtual = 0;
-let pontuacao = 0;
-let respondeu = false;
-
-
-/* CARREGAR PERGUNTA */
-
-function carregarPergunta() {
-
-    if (!pergunta || opcoes.length === 0) {
-        return;
-    }
-
-    respondeu = false;
-
-    const atual =
-        perguntas[perguntaAtual];
-
-
-    pergunta.textContent =
-        atual.pergunta;
-
-
-    if (numeroPergunta) {
-
-        numeroPergunta.textContent =
-            perguntaAtual + 1;
-
-    }
-
-
-    if (progresso) {
-
-        progresso.style.width =
-            ((perguntaAtual + 1) / perguntas.length) * 100 + "%";
-
-    }
-
-
-    if (feedback) {
-
-        feedback.className = "feedback";
-        feedback.innerHTML = "";
-
-    }
-
-
-    if (proximaPergunta) {
-
-        proximaPergunta.style.display = "none";
-
-    }
-
-
-    opcoes.forEach((opcao, index) => {
-
-        opcao.disabled = false;
-
-        opcao.classList.remove(
-            "certa",
-            "errada"
-        );
-
-
-        const texto =
-            opcao.querySelector("span");
-
-
-        if (texto) {
-
-            texto.textContent =
-                atual.opcoes[index][0];
-
-        }
-
-
-        opcao.dataset.resposta =
-            atual.opcoes[index][1];
-
-    });
+    heroTitle.classList.add(
+        "titulo-pronto"
+    );
 
 }
 
 
-/* ESCOLHER RESPOSTA */
+/* =========================================================
+   FECHAR MENU AO REDIMENSIONAR
+   ========================================================= */
 
-opcoes.forEach((opcao) => {
+window.addEventListener("resize", () => {
 
-    opcao.addEventListener("click", () => {
+    if (window.innerWidth > 900) {
 
-        if (respondeu) {
-            return;
+        if (menu) {
+
+            menu.classList.remove("active");
+
         }
 
+        const menuToggle =
+            document.querySelector(".menu-toggle");
 
-        respondeu = true;
+        if (menuToggle) {
 
+            const icon =
+                menuToggle.querySelector("i");
 
-        const acertou =
-            opcao.dataset.resposta === "certa";
+            if (icon) {
 
+                icon.classList.remove(
+                    "fa-xmark"
+                );
 
-        opcoes.forEach((item) => {
-
-            item.disabled = true;
-
-        });
-
-
-        if (acertou) {
-
-            pontuacao++;
-
-            opcao.classList.add("certa");
-
-
-            if (feedback) {
-
-                feedback.className =
-                    "feedback mostrar certo";
-
-
-                feedback.innerHTML = `
-                    <i class="fa-solid fa-circle-check"></i>
-
-                    <div>
-                        <strong>Boa escolha!</strong>
-
-                        <p>
-                            ${perguntas[perguntaAtual].explicacao}
-                        </p>
-                    </div>
-                `;
-
-            }
-
-        } else {
-
-            opcao.classList.add("errada");
-
-
-            if (feedback) {
-
-                feedback.className =
-                    "feedback mostrar errado";
-
-
-                feedback.innerHTML = `
-                    <i class="fa-solid fa-circle-xmark"></i>
-
-                    <div>
-                        <strong>Quase!</strong>
-
-                        <p>
-                            ${perguntas[perguntaAtual].explicacao}
-                        </p>
-                    </div>
-                `;
+                icon.classList.add(
+                    "fa-bars"
+                );
 
             }
 
         }
 
-
-        if (proximaPergunta) {
-
-            proximaPergunta.style.display =
-                "inline-flex";
-
-        }
-
-    });
+    }
 
 });
 
 
-/* PRÓXIMA PERGUNTA */
+/* =========================================================
+   ANO AUTOMÁTICO NO RODAPÉ
+   ========================================================= */
 
-if (proximaPergunta) {
+const anoAtual = new Date().getFullYear();
 
-    proximaPergunta.addEventListener("click", () => {
+const footerTexto =
+    document.querySelector(".footer-bottom p");
 
-        perguntaAtual++;
+if (footerTexto) {
 
-
-        if (perguntaAtual < perguntas.length) {
-
-            carregarPergunta();
-
-        } else {
-
-            mostrarResultado();
-
-        }
-
-    });
+    footerTexto.innerHTML =
+        `© ${anoAtual} • Voz Contra o Bullying • Projeto Escolar de Conscientização`;
 
 }
 
 
-/* RESULTADO */
+/* =========================================================
+   ACESSIBILIDADE — TECLADO
+   ========================================================= */
 
-function mostrarResultado() {
+document.addEventListener("keydown", (event) => {
 
-    if (!perguntaContainer || !resultado) {
-        return;
-    }
+    if (event.key === "Escape") {
 
+        if (menu) {
 
-    perguntaContainer.style.display =
-        "none";
+            menu.classList.remove("active");
 
+        }
 
-    resultado.classList.add("mostrar");
+        const menuToggle =
+            document.querySelector(".menu-toggle");
 
+        if (menuToggle) {
 
-    if (pontuacaoTexto) {
+            const icon =
+                menuToggle.querySelector("i");
 
-        pontuacaoTexto.textContent =
-            `Você acertou ${pontuacao} de ${perguntas.length} situações!`;
+            if (icon) {
 
-    }
+                icon.classList.remove(
+                    "fa-xmark"
+                );
 
+                icon.classList.add(
+                    "fa-bars"
+                );
 
-    if (mensagemResultado) {
-
-        if (pontuacao === 3) {
-
-            mensagemResultado.textContent =
-                "Você está pronto para ser uma voz contra o bullying! 💜";
-
-        } else if (pontuacao === 2) {
-
-            mensagemResultado.textContent =
-                "Mandou bem! Você já sabe como contribuir para um ambiente mais respeitoso.";
-
-        } else {
-
-            mensagemResultado.textContent =
-                "Você pode aprender ainda mais sobre como agir e ajudar. Cada atitude conta!";
+            }
 
         }
 
     }
 
-}
+});
 
 
-/* REINICIAR DESAFIO */
+/* =========================================================
+   MENSAGEM NO CONSOLE
+   ========================================================= */
 
-if (reiniciarDesafio) {
-
-    reiniciarDesafio.addEventListener("click", () => {
-
-        perguntaAtual = 0;
-
-        pontuacao = 0;
-
-
-        resultado.classList.remove(
-            "mostrar"
-        );
-
-
-        if (perguntaContainer) {
-
-            perguntaContainer.style.display =
-                "block";
-
-        }
-
-
-        carregarPergunta();
-
-    });
-
-}
-
-
-/* INICIAR DESAFIO */
-
-if (pergunta && opcoes.length > 0) {
-
-    carregarPergunta();
-
-}
+console.log(
+    "💜 Voz Contra o Bullying — site carregado com sucesso!"
+);
