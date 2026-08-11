@@ -1,454 +1,701 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Desafio | Voz Contra o Bullying</title>
-<meta name="description" content="Desafio interativo sobre bullying, respeito, empatia e atitudes de conscientização.">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Quiz | Voz Contra o Bullying</title>
+
+    <meta
+        name="description"
+        content="Quiz educativo sobre bullying, respeito, empatia e convivência."
+    >
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
 </head>
+
+
 <body>
 
+
+<!-- =====================================================
+     CABEÇALHO
+     ===================================================== -->
+
 <header class="hero-header">
-<nav class="navbar">
 
-<div class="logo">
-<i class="fa-solid fa-shield-heart"></i>
-<div>
-<h2>Voz Contra o Bullying</h2>
-<p>Respeito • Empatia • Inclusão</p>
-</div>
-</div>
 
-<ul class="menu">
-<li><a href="index.html">Início</a></li>
-<li><a href="index.html#sobre">O que é?</a></li>
-<li><a href="index.html#tipos">Tipos</a></li>
-<li><a href="index.html#ajuda">Como ajudar</a></li>
-<li><a href="index.html#apoio">Canais de Apoio</a></li>
-<li><a href="escuta.html">Portal de Escuta</a></li>
-<li><a href="quiz.html">Desafio</a></li>
-<li><a href="referencias.html">Referências</a></li>
-</ul>
+    <nav class="navbar">
 
-<button id="darkModeBtn" aria-label="Ativar modo escuro">
-<i class="fa-solid fa-moon"></i>
-</button>
 
-</nav>
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <i class="fa-solid fa-shield-heart"></i>
+
+            <div>
+
+                <h2>
+                    Voz Contra o Bullying
+                </h2>
+
+                <p>
+                    Respeito • Empatia • Inclusão
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <!-- MENU -->
+
+        <ul class="menu">
+
+            <li>
+                <a href="index.html">
+                    Início
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#sobre">
+                    O que é?
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#tipos">
+                    Tipos
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#ajuda">
+                    Como ajudar
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html#apoio">
+                    Canais de Apoio
+                </a>
+            </li>
+
+            <li>
+                <a href="escuta.html">
+                    Portal de Escuta
+                </a>
+            </li>
+
+            <li>
+                <a href="quiz.html">
+                    Quiz
+                </a>
+            </li>
+
+            <li>
+                <a href="referencias.html">
+                    Referências
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- MODO ESCURO -->
+
+        <button
+            id="darkModeBtn"
+            aria-label="Ativar modo escuro"
+        >
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+
+    </nav>
+
+
+    <!-- =================================================
+         HERO DO QUIZ
+         ================================================= -->
+
+    <section class="hero">
+
+
+        <div class="hero-content">
+
+
+            <div class="hero-text">
+
+
+                <span class="tag">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    Teste seus conhecimentos
+
+                </span>
+
+
+                <h1>
+                    Você sabe tudo sobre bullying?
+                </h1>
+
+
+                <h2>
+                    Responda às perguntas e descubra!
+                </h2>
+
+
+                <p>
+
+                    Este quiz foi criado para ajudar você
+                    a aprender mais sobre bullying,
+                    cyberbullying, respeito e formas de
+                    ajudar outras pessoas.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#quiz"
+                        class="btn-principal"
+                    >
+
+                        <i class="fa-solid fa-play"></i>
+
+                        Começar o quiz
+
+                    </a>
+
+
+                    <a
+                        href="index.html"
+                        class="btn-secundario"
+                    >
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Voltar ao início
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ILUSTRAÇÃO -->
+
+            <div class="hero-decoration">
+
+
+                <div class="hero-circle">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+
+                <div class="floating-heart heart-one">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+
+                <div class="floating-heart heart-two">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+
+                <div class="floating-message">
+
+                    <i class="fa-solid fa-question"></i>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
 </header>
+
 
 <main>
 
-<section class="desafio">
 
-<div class="container">
+<!-- =====================================================
+     INTRODUÇÃO
+     ===================================================== -->
 
-<div class="titulo-secao">
-<span>DESAFIO INTERATIVO</span>
-<h1>Você sabe agir contra o bullying?</h1>
-<p>
-Três situações. Três escolhas. Descubra como pequenas atitudes
-podem fazer a diferença.
-</p>
-</div>
+<section class="impacto">
 
-<div class="desafio-card">
 
-<div class="desafio-topo">
-<div class="desafio-icone">
-<i class="fa-solid fa-gamepad"></i>
-</div>
+    <div class="container">
 
-<div>
-<span class="progresso-texto">Situação <strong id="numeroPergunta">1</strong> de 3</span>
-<div class="barra-progresso">
-<div id="progresso" class="progresso"></div>
-</div>
-</div>
-</div>
 
-<div id="pergunta-container">
+        <div class="titulo-secao">
 
-<h2 id="pergunta">
-Você percebe que um colega está sendo excluído pelos outros.
-O que você faria?
-</h2>
+            <span>
+                ANTES DE COMEÇAR
+            </span>
 
-<div class="opcoes">
+            <h2>
+                Vamos aprender juntos?
+            </h2>
 
-<button class="opcao" data-resposta="errada">
-<i class="fa-solid fa-eye-slash"></i>
-<span>Ignoraria, pois não é problema meu.</span>
-</button>
+            <p>
+                Não se preocupe em acertar tudo.
+                O objetivo principal é aprender!
+            </p>
 
-<button class="opcao" data-resposta="certa">
-<i class="fa-solid fa-hand-holding-heart"></i>
-<span>Me aproximaria, ofereceria apoio e procuraria ajuda se necessário.</span>
-</button>
+        </div>
 
-<button class="opcao" data-resposta="errada">
-<i class="fa-solid fa-face-laugh"></i>
-<span>Faria uma brincadeira para tentar chamar a atenção.</span>
-</button>
 
-</div>
+        <div class="impacto-grid">
 
-<div id="feedback" class="feedback"></div>
 
-<button id="proximaPergunta" class="btn-principal">
-Próxima situação
-<i class="fa-solid fa-arrow-right"></i>
-</button>
+            <div class="card">
 
-</div>
+                <div class="card-icon">
 
-<div id="resultado" class="resultado">
+                    <i class="fa-solid fa-circle-question"></i>
 
-<div class="resultado-icone">
-<i class="fa-solid fa-trophy"></i>
-</div>
+                </div>
 
-<h2>Desafio concluído!</h2>
+                <h3>
+                    10 perguntas
+                </h3>
 
-<p id="pontuacao"></p>
+                <p>
+                    Responda perguntas sobre situações
+                    relacionadas ao bullying.
+                </p>
 
-<p id="mensagemResultado"></p>
+            </div>
 
-<button id="reiniciarDesafio" class="btn-principal">
-<i class="fa-solid fa-rotate-right"></i>
-Tentar novamente
-</button>
 
-</div>
+            <div class="card">
 
-</div>
+                <div class="card-icon">
 
-<div class="frases-desafio">
+                    <i class="fa-solid fa-lightbulb"></i>
 
-<div>
-<i class="fa-solid fa-heart"></i>
-<p>Respeito começa nas pequenas atitudes.</p>
-</div>
+                </div>
 
-<div>
-<i class="fa-solid fa-users"></i>
-<p>Juntos podemos construir uma escola mais acolhedora.</p>
-</div>
+                <h3>
+                    Aprenda
+                </h3>
 
-<div>
-<i class="fa-solid fa-bullhorn"></i>
-<p>Sua voz pode fazer a diferença.</p>
-</div>
+                <p>
+                    Cada pergunta ajuda a refletir sobre
+                    respeito, empatia e convivência.
+                </p>
 
-</div>
+            </div>
 
-<div class="voltar-inicio">
-<a href="index.html" class="btn-secundario">
-<i class="fa-solid fa-arrow-left"></i>
-Voltar para o início
-</a>
-</div>
 
-</div>
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                </div>
+
+                <h3>
+                    Descubra sua pontuação
+                </h3>
+
+                <p>
+                    Ao terminar, você verá quantas
+                    perguntas acertou.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
 
 </section>
 
+
+<!-- =====================================================
+     QUIZ
+     ===================================================== -->
+
+<section
+    id="quiz"
+    class="sobre"
+>
+
+
+    <div class="container">
+
+
+        <div class="titulo-secao">
+
+            <span>
+                QUIZ EDUCATIVO
+            </span>
+
+            <h2>
+                Vamos começar?
+            </h2>
+
+            <p>
+                Leia cada pergunta com atenção e
+                escolha a alternativa que você considera
+                correta.
+            </p>
+
+        </div>
+
+
+        <!-- ÁREA ONDE AS PERGUNTAS SERÃO INSERIDAS -->
+
+        <div
+            id="quizContainer"
+            class="quiz-container"
+        >
+
+            <!-- O JavaScript colocará as perguntas aqui -->
+
+        </div>
+
+
+        <!-- BOTÃO PRÓXIMA -->
+
+        <div class="quiz-controle">
+
+            <button
+                id="proximaPergunta"
+                class="btn-principal"
+            >
+
+                Próxima pergunta
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- RESULTADO -->
+
+        <div
+            id="resultadoQuiz"
+            class="resultado-quiz"
+        >
+
+            <!-- O resultado aparecerá aqui -->
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MENSAGEM FINAL
+     ===================================================== -->
+
+<section class="frase">
+
+
+    <div class="container">
+
+
+        <div class="frase-icon">
+
+            <i class="fa-solid fa-heart"></i>
+
+        </div>
+
+
+        <h2>
+            Conhecimento também é uma forma de
+            transformar o ambiente ao nosso redor.
+        </h2>
+
+
+        <p>
+            Continue praticando o respeito,
+            a empatia e a gentileza todos os dias.
+        </p>
+
+
+    </div>
+
+
+</section>
+<!-- =====================================================
+     ENCERRAMENTO DO QUIZ
+     ===================================================== -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-content">
+
+            <span class="tag">
+                RESPEITO E EMPATIA
+            </span>
+
+            <h2>
+                Cada atitude pode fazer diferença.
+            </h2>
+
+            <p>
+                Aprender sobre bullying é importante,
+                mas colocar o respeito em prática todos
+                os dias é ainda mais importante.
+            </p>
+
+            <a
+                href="escuta.html"
+                class="btn-principal"
+            >
+
+                <i class="fa-solid fa-heart"></i>
+
+                Conhecer o Portal de Escuta
+
+            </a>
+
+        </div>
+
+
+        <div class="cta-icon">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 </main>
+
+
+<!-- =====================================================
+     RODAPÉ
+     ===================================================== -->
 
 <footer>
 
-<div class="footer-container">
 
-<div class="footer-logo">
+    <div class="footer-container">
 
-<h2>
-<i class="fa-solid fa-shield-heart"></i>
-Voz Contra o Bullying
-</h2>
 
-<p>
-Projeto escolar dedicado à conscientização, ao respeito e ao combate
-ao bullying, incentivando uma convivência mais segura e acolhedora.
-</p>
+        <!-- IDENTIDADE -->
 
-</div>
+        <div class="footer-logo">
 
-<div class="footer-links">
+            <h2>
 
-<h3>Navegação</h3>
+                <i class="fa-solid fa-shield-heart"></i>
 
-<ul>
-<li><a href="index.html">Início</a></li>
-<li><a href="index.html#sobre">O que é?</a></li>
-<li><a href="index.html#tipos">Tipos</a></li>
-<li><a href="index.html#ajuda">Como ajudar</a></li>
-<li><a href="index.html#apoio">Canais de Apoio</a></li>
-<li><a href="escuta.html">Portal de Escuta</a></li>
-</ul>
+                Voz Contra o Bullying
 
-</div>
+            </h2>
 
-<div class="footer-contato">
+            <p>
 
-<h3>Mensagem</h3>
+                Projeto escolar dedicado à conscientização,
+                ao respeito, à empatia e à construção de
+                ambientes mais seguros e acolhedores.
 
-<p>
-💜 Respeito gera respeito.<br>
-Sua voz importa e você merece ser ouvido.
-</p>
+            </p>
 
-</div>
+        </div>
 
-</div>
 
-<div class="footer-bottom">
+        <!-- NAVEGAÇÃO -->
 
-<p>
-© 2026 • Voz Contra o Bullying • Projeto Escolar de Conscientização
-</p>
+        <div class="footer-links">
 
-</div>
+            <h3>
+                Navegação
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#sobre">
+                        O que é?
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#tipos">
+                        Tipos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#ajuda">
+                        Como ajudar
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html#apoio">
+                        Canais de Apoio
+                    </a>
+                </li>
+
+                <li>
+                    <a href="escuta.html">
+                        Portal de Escuta
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quiz.html">
+                        Quiz
+                    </a>
+                </li>
+
+                <li>
+                    <a href="referencias.html">
+                        Referências
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- MENSAGEM -->
+
+        <div class="footer-contato">
+
+            <h3>
+                Continue aprendendo
+            </h3>
+
+            <p>
+                💜 Respeito, empatia e informação
+                ajudam a construir uma convivência
+                melhor.
+            </p>
+
+            <p>
+                Sua atitude pode fazer a diferença.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 • Voz Contra o Bullying •
+            Projeto Escolar de Conscientização
+        </p>
+
+
+        <a
+            href="#"
+            class="back-to-top"
+            aria-label="Voltar ao topo"
+        >
+
+            <i class="fa-solid fa-arrow-up"></i>
+
+        </a>
+
+    </div>
+
 
 </footer>
 
-<button id="topoBtn" aria-label="Voltar ao topo">
-<i class="fa-solid fa-arrow-up"></i>
+
+<!-- =====================================================
+     BOTÃO VOLTAR AO TOPO
+     ===================================================== -->
+
+<button
+    id="topoBtn"
+    aria-label="Voltar ao topo"
+>
+
+    <i class="fa-solid fa-arrow-up"></i>
+
 </button>
 
-<script>
 
-const perguntas = [
-{
-pergunta:"Você percebe que um colega está sendo excluído pelos outros. O que você faria?",
-opcoes:[
-["Ignoraria, pois não é problema meu.","errada"],
-["Me aproximaria, ofereceria apoio e procuraria ajuda se necessário.","certa"],
-["Faria uma brincadeira para tentar chamar a atenção.","errada"]
-],
-explicacao:"Apoiar quem está sendo excluído e procurar ajuda de uma pessoa de confiança é uma atitude de empatia e respeito."
-},
-{
-pergunta:"Um colega conta para você que está sofrendo bullying. Como você reage?",
-opcoes:[
-["Digo que é melhor esquecer e não falar sobre isso.","errada"],
-["Escuto, acolho e incentivo a pessoa a procurar alguém de confiança.","certa"],
-["Conto para outras pessoas para descobrir o que aconteceu.","errada"]
-],
-explicacao:"Ouvir sem julgamentos e incentivar a busca por ajuda pode fazer a pessoa se sentir acolhida e protegida."
-},
-{
-pergunta:"Você recebe uma mensagem ofensiva sobre um colega em um grupo. O que faz?",
-opcoes:[
-["Compartilho com outras pessoas porque achei engraçado.","errada"],
-["Respondo com outra ofensa para defender meu colega.","errada"],
-["Não compartilho a mensagem e procuro ajuda se a situação continuar.","certa"]
-],
-explicacao:"Não espalhar ofensas ajuda a interromper o ciclo de violência. Quando necessário, procure um adulto ou responsável de confiança."
-}
-];
+<!-- =====================================================
+     JAVASCRIPT DO QUIZ
+     ===================================================== -->
 
-let perguntaAtual = 0;
-let pontuacao = 0;
-let respondeu = false;
+<script src="quiz.js"></script>
 
-const pergunta = document.getElementById("pergunta");
-const opcoes = document.querySelectorAll(".opcao");
-const feedback = document.getElementById("feedback");
-const proximaPergunta = document.getElementById("proximaPergunta");
-const numeroPergunta = document.getElementById("numeroPergunta");
-const progresso = document.getElementById("progresso");
-const perguntaContainer = document.getElementById("pergunta-container");
-const resultado = document.getElementById("resultado");
-const pontuacaoTexto = document.getElementById("pontuacao");
-const mensagemResultado = document.getElementById("mensagemResultado");
-const reiniciarDesafio = document.getElementById("reiniciarDesafio");
-
-function carregarPergunta(){
-
-respondeu = false;
-
-const atual = perguntas[perguntaAtual];
-
-pergunta.textContent = atual.pergunta;
-
-numeroPergunta.textContent = perguntaAtual + 1;
-
-progresso.style.width = ((perguntaAtual + 1) / 3) * 100 + "%";
-
-feedback.className = "feedback";
-feedback.innerHTML = "";
-
-proximaPergunta.style.display = "none";
-
-opcoes.forEach((opcao,index) => {
-
-opcao.disabled = false;
-opcao.classList.remove("certa","errada");
-
-opcao.querySelector("span").textContent = atual.opcoes[index][0];
-
-opcao.dataset.resposta = atual.opcoes[index][1];
-
-});
-
-}
-
-opcoes.forEach(opcao => {
-
-opcao.addEventListener("click", () => {
-
-if(respondeu) return;
-
-respondeu = true;
-
-const acertou = opcao.dataset.resposta === "certa";
-
-opcoes.forEach(item => {
-item.disabled = true;
-});
-
-if(acertou){
-
-pontuacao++;
-
-opcao.classList.add("certa");
-
-feedback.className = "feedback mostrar certo";
-
-feedback.innerHTML = `
-<i class="fa-solid fa-circle-check"></i>
-<div>
-<strong>Boa escolha!</strong>
-<p>${perguntas[perguntaAtual].explicacao}</p>
-</div>
-`;
-
-}else{
-
-opcao.classList.add("errada");
-
-feedback.className = "feedback mostrar errado";
-
-feedback.innerHTML = `
-<i class="fa-solid fa-circle-xmark"></i>
-<div>
-<strong>Quase!</strong>
-<p>${perguntas[perguntaAtual].explicacao}</p>
-</div>
-`;
-
-}
-
-proximaPergunta.style.display = "inline-flex";
-
-});
-
-});
-
-proximaPergunta.addEventListener("click", () => {
-
-perguntaAtual++;
-
-if(perguntaAtual < perguntas.length){
-
-carregarPergunta();
-
-}else{
-
-mostrarResultado();
-
-}
-
-});
-
-function mostrarResultado(){
-
-perguntaContainer.style.display = "none";
-resultado.classList.add("mostrar");
-
-pontuacaoTexto.textContent = `Você acertou ${pontuacao} de 3 situações!`;
-
-if(pontuacao === 3){
-
-mensagemResultado.textContent = "Você está pronto para ser uma voz contra o bullying! 💜";
-
-}else if(pontuacao === 2){
-
-mensagemResultado.textContent = "Mandou bem! Você já sabe como contribuir para um ambiente mais respeitoso.";
-
-}else{
-
-mensagemResultado.textContent = "Você pode aprender ainda mais sobre como agir e ajudar. Cada atitude conta!";
-
-}
-
-}
-
-reiniciarDesafio.addEventListener("click", () => {
-
-perguntaAtual = 0;
-pontuacao = 0;
-
-resultado.classList.remove("mostrar");
-perguntaContainer.style.display = "block";
-
-carregarPergunta();
-
-});
-
-const darkModeBtn = document.getElementById("darkModeBtn");
-
-darkModeBtn.addEventListener("click", () => {
-
-document.body.classList.toggle("dark-mode");
-
-const icone = darkModeBtn.querySelector("i");
-
-if(document.body.classList.contains("dark-mode")){
-
-icone.classList.remove("fa-moon");
-icone.classList.add("fa-sun");
-
-}else{
-
-icone.classList.remove("fa-sun");
-icone.classList.add("fa-moon");
-
-}
-
-});
-
-const topoBtn = document.getElementById("topoBtn");
-
-window.addEventListener("scroll", () => {
-
-if(window.scrollY > 300){
-
-topoBtn.classList.add("mostrar");
-
-}else{
-
-topoBtn.classList.remove("mostrar");
-
-}
-
-});
-
-topoBtn.addEventListener("click", () => {
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-});
-
-carregarPergunta();
-
-</script>
 
 </body>
+
 </html>
